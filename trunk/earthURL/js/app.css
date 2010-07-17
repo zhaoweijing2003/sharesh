@@ -1,0 +1,84 @@
+HTML {
+	FONT-SIZE: 100%; FONT-FAMILY: arial, helvetica, sans-serif
+}
+BODY {
+	FONT-SIZE: 67.5%
+}
+P {
+	FONT-SIZE: 1.2em
+}
+A {
+	COLOR: #4b6fa5
+}
+A:visited {
+	COLOR: #4b6fa5
+}
+A:hover {
+	COLOR: #4b6fa5
+}
+A:active {
+	COLOR: #4b6fa5
+}
+#container {
+	PADDING-RIGHT: 10px; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; MARGIN: 0px auto; WIDTH: 960px; PADDING-TOP: 10px
+}
+#header {
+	MARGIN-BOTTOM: 15px; POSITION: relative
+}
+#logo {
+	BACKGROUND: url(logo.png) no-repeat left top; WIDTH: 187px; HEIGHT: 37px
+}
+#search-area {
+	LEFT: 250px; WIDTH: 300px; POSITION: absolute; TOP: 1em
+}
+#search-box {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 1px; BORDER-TOP: #ccc 1px solid; PADDING-LEFT: 1px; FONT-SIZE: 1.2em; PADDING-BOTTOM: 1px; BORDER-LEFT: #ccc 1px solid; WIDTH: 250px; PADDING-TOP: 1px; BORDER-BOTTOM: #ccc 1px solid
+}
+.placeholder#search-box {
+	COLOR: #aaa
+}
+#search-loading {
+	DISPLAY: none; BACKGROUND: url(loading.gif) no-repeat left top; LEFT: 260px; WIDTH: 16px; POSITION: absolute; TOP: 2px; HEIGHT: 16px
+}
+#search-button {
+	DISPLAY: none
+}
+#search-error {
+	DISPLAY: none; FONT-WEIGHT: bold; FONT-SIZE: 1em; COLOR: #a00; POSITION: relative; TOP: 4px
+}
+#top-help {
+	RIGHT: 0px; COLOR: #aaa; POSITION: absolute; TOP: 1em
+}
+#logo SPAN {
+	DISPLAY: none
+}
+#earth {
+	OVERFLOW: hidden; HEIGHT: 500px
+}
+#earth DIV {
+	BACKGROUND-COLOR: #fff! important
+}
+#earth DIV DIV DIV {
+	BACKGROUND-COLOR: #fff! important
+}
+#footer {
+	POSITION: relative
+}
+#copyurl-container {
+	MARGIN-TOP: 20px; MARGIN-BOTTOM: 20px; FONT-WEIGHT: bold; VISIBILITY: hidden; COLOR: #4b6fa5; TEXT-ALIGN: center
+}
+#copyurl-link SPAN {
+	DISPLAY: none
+}
+#tweet-link SPAN {
+	DISPLAY: none
+}
+#copyurl-link {
+	DISPLAY: inline-block; BACKGROUND: url(share-buttons.png) no-repeat; MARGIN-LEFT: 6px; VERTICAL-ALIGN: sub; OVERFLOW: auto; WIDTH: 53px; HEIGHT: 27px
+}
+#tweet-link {
+	DISPLAY: inline-block; BACKGROUND: url(share-buttons.png) no-repeat 0% 100%; MARGIN-LEFT: 6px; VERTICAL-ALIGN: sub; WIDTH: 70px; HEIGHT: 27px
+}
+#copyright {
+	FONT-SIZE: 1.2em; RIGHT: 0px; COLOR: #aaa; TEXT-ALIGN: center; float: left; width:100%;
+}
