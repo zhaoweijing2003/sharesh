@@ -1,0 +1,67 @@
+===Predefined Wiki Page Labels:===
+{{{
+Featured              = 列出在项目主页
+Phase-Requirements    = 项目规划和需求分析
+Phase-Design          = 项目设计和关键问题
+Phase-Implementation  = 开发者指南
+Phase-QA              = 测试计划和质量规范
+Phase-Deploy          = 如何安装和配置程序
+Phase-Support         = 计划支持的用户和宣传
+Deprecated            = 废弃的，大多数用户不应该参照这个
+}}}
+===Open Issue Status Values:===
+{{{
+New       = 新添加并且未审核的问题
+Accepted  = 已通过审核的问题
+Assigned  = 已经指派相关人员处理
+Started  = 正在处理这个问题
+}}}
+===Closed Issue Status Values:===
+{{{
+Fixed       = 开发者提出的需要变化，已经解决
+Verified    = 已经解决的问题
+Invalid     = 无效的问题报告
+Duplicate   = 重复出现的问题
+WontFix     = 决定不解决这个问题
+}}}
+===Predefined Issue Labels:===
+{{{
+Type-Defect                  = 项目出现 BUG
+Type-Enhancement             = 功能需要加强
+Type-Task                    = 新的任务，不需要修改代码或者文档
+Type-Review                  = 请求审核代码
+Type-Other                   = 其他类型的问题
+Priority-Critical            = 必须在指定的时间内解决
+Priority-High                = 希望在指定的时间内解决
+Priority-Medium              = 优先考虑解决
+Priority-Low                 = 可以在以后解决
+OpSys-All                    = 影响到所有的操作系统
+OpSys-Windows                = 影响到 Windows 操作系统
+OpSys-Linux                  = 影响到 Linux 操作系统
+OpSys-OSX                    = 影响到 Mac OS X 操作系统
+Milestone-Release1.0         = 所有基本功能可正常工作
+Component-UI                 = 问题涉及到程序界面
+Component-Logic              = 问题涉及到应用程序逻辑
+Component-Persistence        = 问题涉及到的数据存储
+Component-Scripts            = 实例或安装脚本
+Component-Docs               = 问题涉及到用户文档
+Security                     = 存在安全性的问题
+Performance                  = 存在性能问题
+Usability                    = 影响到程序的可用性
+Maintainability              = 影响到程序的规划
+}}}
+===Predefined Download Labels:===
+{{{
+Featured               = 列出在项目主页
+Type-Executable        = 可运行的项目
+Type-Installer         = 可安装的项目
+Type-Package           = 可在操作系统上安装的软件包
+Type-Archive           = 下载及解压后，按照指示进行安装
+Type-Source            = 项目源文件包
+Type-Docs              = 项目文档
+OpSys-All              = 可运行于所有的操作系统上
+OpSys-Windows          = 可运行于 Windows 操作系统
+OpSys-Linux            = 可运行于 Linux 操作系统
+OpSys-OSX              = 可运行于 Mac OS X 操作系统
+Deprecated             = 废弃的，大多数用户不应该下载这个包
+}}}
