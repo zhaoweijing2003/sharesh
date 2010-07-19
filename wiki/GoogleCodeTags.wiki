@@ -1,4 +1,4 @@
-#summary Google code上的Tags中文翻译
+#summary Google code上的Wiki、Issues、Downloads的Tags中文翻译
 ===Predefined Wiki Page Labels:===
 {{{
 Featured              = 列出在项目主页
