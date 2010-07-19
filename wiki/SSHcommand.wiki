@@ -1,4 +1,5 @@
 #summary SSH命令大全
+{{{
 rm -rf mydir /* 删除mydir目录 */
 cd mydir /* 进入mydir目录 */
 cd – /* 回上一级目录 */
@@ -792,7 +793,7 @@ update set user=”新名字” where user=”旧名字”;
 在windows中的关闭mysql命令 net stop mysql ；启动是net start mysql
 OPTIMIZE TABLE “;优化表
 
-Post in LAMP | No Comments »
+Post in LAMP | No Comments 
 
 ib_logfile0和ib_logfile1,为INNODB数据LOG文件
 01月 27th, 2008
@@ -809,3 +810,4 @@ The directory path to the InnoDB log files. It must have the same value as innod
 再启动
 
 不过有个问题,LOG文件是固定不变,用来存储未提交的数据,一般设为几十兆就可以了,你的是否设置有问题.
+}}}
