@@ -79,8 +79,11 @@ cdb_words--不良词语过滤
 
 
 ===discuz数据字典(一)===
+
 cdb_access用户版块权限表
+
 表说明：设置某一用户对某一版块的用户权限。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 关联主键，特殊用户的UID || 
 || fid || smallint(6) || 否 || 0 || 关联主键，版块的FID || 
@@ -92,7 +95,9 @@ cdb_access用户版块权限表
 
 
 cdb_activities活动表
+
 表说明：记录活动主题的活动相关数据。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || tid || mediumint(8) || 否 || 0 || 主键，活动主题的TID || 
 || uid || mediumint(8) || 否 || 0 || 索引，发布活动者UID || 
@@ -107,7 +112,9 @@ cdb_activities活动表
 
 
 cdb_activityapplies活动申请表
+
 表说明：记录参与活动主题的申请数据。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || applyid || int(10) || 否主键，活动申请编号，自增 || 
 || tid || mediumint(8) || 否 || 0 || 索引，活动主题的TID || 
@@ -121,14 +128,18 @@ cdb_activityapplies活动申请表
 
 
 cdb_adminactions关联管理员权限表
+
 表说明：当特殊用户组管理权限关联为管理员时，记录该组无权使用的功能。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || admingid || smallint(6) || 否 || 0 || 主键，关联为管理员的用户组GID || 
 || disabledactions || text || 否关联后的受限功能 || 
 
 
 cdb_admingroups管理组表
+
 表说明：记录管理组的管理权限。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || admingid || smallint(6) || 否 || 0 || 主键，管理组GID || 
 || alloweditpost || tinyint(1) || 否 || 0 || 允许编辑帖子 || 
@@ -152,7 +163,9 @@ cdb_admingroups管理组表
 
 
 cdb_adminnotes后台管理公告表
+
 表说明：记录后台管理公告。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || id || mediumint(8) || 否主键，后台管理公告编号，自增 || 
 || admin || varchar(15) || 否公告发布者用户名 || 
@@ -164,7 +177,9 @@ cdb_adminnotes后台管理公告表
 
 
 cdb_adminsessions后台会话表
+
 表说明：记录后台会话。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 登录后台用户UID || 
 || ip || char(15) || 否登录者IP || 
@@ -173,7 +188,9 @@ cdb_adminsessions后台会话表
 
 
 cdb_advertisements广告表
+
 表说明：记录广告相关信息，广告参数为不同类型广告设置的参数及内容的serialize值，广告代码为根据广告参数生成的HTML。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || advid || mediumint(8) || 否主键，广告编号，自增 || 
 || available || tinyint(1) || 否 || 0 || 广告可用 || 
@@ -188,7 +205,9 @@ cdb_advertisements广告表
 
 
 cdb_announcements公告表
+
 表说明：记录论坛公告信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || id || smallint(6) || 否主键，公告编号，自增 || 
 || author || varchar(15) || 否公告发布者用户名 || 
@@ -202,7 +221,9 @@ cdb_announcements公告表
 
 
 cdb_attachments附件表
+
 表说明：记录帖子附件信息，filetype会因浏览器不同有所区别，filesize为服务器实际保存的文件大小。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || aid || mediumint(8) || 否主键，附件编号，自增 || 
 || tid || mediumint(8) || 否 || 0 || 索引，附件所在主题TID || 
@@ -223,7 +244,9 @@ cdb_attachments附件表
 
 
 cdb_attachpaymentlog附件付费记录表
+
 表说明：记录帖子附件下载付费信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 关联主键，下载付费用户的UID || 
 || aid || mediumint(8) || 否 || 0 || 关联主键，索引，被下载附件的AID || 
@@ -234,7 +257,9 @@ cdb_attachpaymentlog附件付费记录表
 
 
 cdb_attachtypes附件类型表
+
 表说明：记录允许使用的附件类型信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || id || smallint(6) || 否主键，附件类型编号，自增 || 
 || extension || char(12) || 否附件类型扩展名 || 
@@ -242,7 +267,9 @@ cdb_attachtypes附件类型表
 
 
 cdb_banned禁止IP表
+
 表说明：记录禁止IP操作信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || id || smallint(6) || 否主键，禁止IP操作编号，自增 || 
 || ip1 || smallint(3) || 否 || 0 || ip字段1 || 
@@ -255,7 +282,9 @@ cdb_banned禁止IP表
 
 
 cdb_bbcodes || 自定义代码表
+
 表说明：记录自定义Discuz!代码信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || id || mediumint(8) || 否主键，代码编号，自增 || 
 || available || tinyint(1) || 否 || 0 || 代码可用 || 
@@ -270,7 +299,9 @@ cdb_bbcodes || 自定义代码表
 
 
 cdb_buddys好友表
+
 表说明：记录用户好友信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 索引，添加好友者UID || 
 || buddyid || mediumint(8) || 否 || 0 || 好友UID || 
@@ -280,7 +311,9 @@ cdb_buddys好友表
 
 
 cdb_caches缓存数据表
+
 表说明：记录缓存更新数据。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || cachename || varchar(32) || 否主键，缓存名称 || 
 || type || tinyint(3) || 否缓存类型（SS相关） || 
@@ -290,7 +323,9 @@ cdb_caches缓存数据表
 
 
 cdb_campaigns || Insenz活动表
+
 表说明：略。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || id || mediumint(8) || 否 || 
 || type || tinyint(1) || 否 || 
@@ -305,7 +340,9 @@ cdb_campaigns || Insenz活动表
 
 
 cdb_creditslog积分交易记录表
+
 表说明：记录积分交易信息，包括积分转帐、积分兑换等操作。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 索引，操作用户UID || 
 || fromto || char(15) || 否目标用户的用户名 || 
@@ -318,7 +355,9 @@ cdb_creditslog积分交易记录表
 
 
 cdb_crons计划任务表
+
 表说明：记录计划任务信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || cronid || smallint(6) || 否主键，计划任务编号，自增 || 
 || available || tinyint(1) || 否 || 0 || 计划任务可用 || 
@@ -334,7 +373,9 @@ cdb_crons计划任务表
 
 
 cdb_debateposts辩论观点表
+
 表说明：记录辩论观点信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || pid || int(10) || 否 || 0 || 主键，索引，发布观点的帖子PID || 
 || stand || tinyint(1) || 否 || 0 || 观点属性（0=中立 || 1=正方 || 2=反方） || 
@@ -346,7 +387,9 @@ cdb_debateposts辩论观点表
 
 
 cdb_debates辩论主题表
+
 表说明：记录辩论主题信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || tid || mediumint(8) || 否 || 0 || 主键，辩论主题TID || 
 || uid || mediumint(8) || 否 || 0 || 索引，辩论发起者UID || 
@@ -369,7 +412,9 @@ cdb_debates辩论主题表
 
 
 cdb_failedlogins登录失败记录表
+
 表说明：记录登录失败情况，成功登录后删除失败记录。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || ip || char(15) || 否主键，登录失败者IP || 
 || count || tinyint(1) || 否 || 0 || 登录失败次数 || 
@@ -377,7 +422,9 @@ cdb_failedlogins登录失败记录表
 
 
 cdb_faqs论坛帮助表
+
 表说明：记录论坛帮助信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || id || smallint(6) || 否主键，论坛帮助编号，自增 || 
 || fpid || smallint(6) || 否 || 0 || 上级分类ID || 
@@ -389,7 +436,9 @@ cdb_faqs论坛帮助表
 
 
 cdb_favorites收藏表
+
 表说明：记录用户收藏的主题或版块，每条记录中tid、fid之一为0。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 索引，收藏者UID || 
 || tid || mediumint(8) || 否 || 0 || 被收藏的主题TID || 
@@ -397,7 +446,9 @@ cdb_favorites收藏表
 
 
 cdb_forumfields论坛版块扩展表
+
 表说明：记录论坛版块的扩展信息，标有*的字段为serialize值，标有**的字段为\t分隔。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || fid || smallint(6) || 否 || 0 || 主键，版块FID || 
 || description || text || 否版块简介内容 || 
@@ -427,7 +478,9 @@ cdb_forumfields论坛版块扩展表
 
 
 cdb_forumlinks联盟论坛表
+
 表说明：记录联盟论坛信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || id || smallint(6) || 否主键，联盟论坛编号，自增 || 
 || displayorder || tinyint(3) || 否 || 0 || 显示顺序 || 
@@ -438,7 +491,9 @@ cdb_forumlinks联盟论坛表
 
 
 cdb_forumrecommend版主推荐表
+
 表说明：记录版主推荐主题信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || fid || smallint(6) || 否主题所在版块FID || 
 || tid || mediumint(8) || 否主键，推荐主题TID || 
@@ -451,7 +506,9 @@ cdb_forumrecommend版主推荐表
 
 
 cdb_forums论坛版块表
+
 表说明：记录论坛版块信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || fid || smallint(6) || 否主键，论坛版块编号，自增 || 
 || fup || smallint(6) || 否 || 0 || 索引，上级版块编号 || 
@@ -488,7 +545,9 @@ cdb_forums论坛版块表
 
 
 cdb_imagetypes图片分类表
+
 表说明：记录图片分类信息。现在只有表情分类功能，貌似会增加主题图标和用户头像的分类。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || typeid || smallint(6) || 否主键，图片分类编号，自增 || 
 || name || char(20) || 否图片分类名称 || 
@@ -498,7 +557,9 @@ cdb_imagetypes图片分类表
 
 
 cdb_invites邀请注册数据表
+
 表说明：记录邀请注册信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 索引，邀请码购买者的UID || 
 || dateline || int(10) || 否 || 0 || 邀请码购买时间 || 
@@ -511,7 +572,9 @@ cdb_invites邀请注册数据表
 
 
 cdb_itempool验证问答表
+
 表说明：记录验证问答信息。问答类型好像是预留的。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || id || smallint(6) || 否主键，验证问答编号，自增 || 
 || type || tinyint(1) || 否验证问答类型 || 
@@ -520,7 +583,9 @@ cdb_itempool验证问答表
 
 
 cdb_magiclog道具记录表
+
 表说明：记录道具购买使用等信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 索引，道具所有者UID || 
 || magicid || smallint(6) || 否 || 0 || 道具ID || 
@@ -534,7 +599,9 @@ cdb_magiclog道具记录表
 
 
 cdb_magicmarket道具市场数据表
+
 表说明：记录道具市场中待售道具信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || mid || smallint(6) || 否主键，道具出售编号，自增 || 
 || magicid || smallint(6) || 否 || 0 || 所售道具MAGICID || 
@@ -545,6 +612,7 @@ cdb_magicmarket道具市场数据表
 
 
 cdb_magics道具数据表
+
 表说明：记录道具信息。Magicperm为serialize值 || 
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || magicid || smallint(6) || 否主键，道具编号，自增 || 
@@ -565,7 +633,9 @@ cdb_magics道具数据表
 
 
 cdb_medals勋章表
+
 表说明：记录勋章信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || medalid || smallint(6) || 否主键，勋章编号，自增 || 
 || name || varchar(50) || 否勋章名称 || 
@@ -574,6 +644,7 @@ cdb_medals勋章表
 
 
 cdb_memberfields会员扩展表
+
 表说明：记录会员扩展信息。Medals为\t分隔，groupterms为serialize值 || 
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 主键，会员UID || 
@@ -602,7 +673,9 @@ cdb_memberfields会员扩展表
 
 
 cdb_membermagics会员道具表
+
 表说明：记录会员持有道具信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 索引，会员UID || 
 || magicid || smallint(6) || 否 || 0 || 道具MAGICID || 
@@ -610,7 +683,9 @@ cdb_membermagics会员道具表
 
 
 cdb_members会员表
+
 表说明：记录会员信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否主键，会员编号，自增 || 
 || username || char(15) || 否唯一，会员用户名 || 
@@ -663,7 +738,9 @@ cdb_members会员表
 
 
 || discuz!数据字典(二)2009-12-16 || 11:26cdb_memberspaces个人空间数据表
+
 表说明：记录MiniSpace设置信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 主键，会员UID || 
 || style || char(20) || 否 || 空间风格 || 
@@ -673,7 +750,9 @@ cdb_members会员表
 
 
 cdb_moderators版主表
+
 表说明：记录版主信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 关联主键，版主UID || 
 || fid || smallint(6) || 否 || 0 || 关联主键，版块FID || 
@@ -682,7 +761,9 @@ cdb_moderators版主表
 
 
 cdb_modworks管理统计表
+
 表说明：记录版主管理操作统计信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 索引，版主UID || 
 || modaction || char(3) || 否 || 管理操作标识 || 
@@ -692,7 +773,9 @@ cdb_modworks管理统计表
 
 
 cdb_myposts我的回复表
+
 表说明：记录我的回复信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 关联主键，会员UID || 
 || tid || mediumint(8) || 否 || 0 || 关联主键，索引，主题TID || 
@@ -703,7 +786,9 @@ cdb_myposts我的回复表
 
 
 cdb_mythreads我的主题表
+
 表说明：记录我的主题信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 关联主键，会员UID || 
 || tid || mediumint(8) || 否 || 0 || 关联主键，索引，主题TID || 
@@ -712,7 +797,9 @@ cdb_mythreads我的主题表
 
 
 cdb_onlinelist在线列表定制表
+
 表说明：记录用户在线列表定制信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || groupid || smallint(6) || 否 || 0 || 用户组GID || 
 || displayorder || tinyint(3) || 否 || 0 || 显示顺序 || 
@@ -721,7 +808,9 @@ cdb_onlinelist在线列表定制表
 
 
 cdb_onlinetime在线时间表
+
 表说明：记录用户在线时间统计信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 主键，会员UID || 
 || thismonth || smallint(6) || 否 || 0 || 本月在线时间 || 
@@ -730,7 +819,9 @@ cdb_onlinetime在线时间表
 
 
 cdb_orders订单表
+
 表说明：记录积分充值订单信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || orderid || char(32) || 否 || 唯一，订单编号 || 
 || status || char(3) || 否 || 订单状态（1=未付款 || 2=已支付 || 3=人工补单） || 
@@ -744,7 +835,9 @@ cdb_orders订单表
 
 
 cdb_paymentlog主题购买记录表
+
 表说明：记录主题购买信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 关联主键，索引，购买者UID || 
 || tid || mediumint(8) || 否 || 0 || 关联主键，所购主题TID || 
@@ -755,7 +848,9 @@ cdb_paymentlog主题购买记录表
 
 
 cdb_pluginhooks插件钩子表
+
 表说明：记录插件钩子信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || pluginhookid || mediumint(8) || 否 || 主键，插件钩子编号，自增 || 
 || pluginid || smallint(6) || 否 || 0 || 索引，所属插件pluginid || 
@@ -766,7 +861,9 @@ cdb_pluginhooks插件钩子表
 
 
 cdb_plugins插件表
+
 表说明：记录插件信息。Modules为serialize值。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || pluginid || smallint(6) || 否 || 主键，插件编号，自增 || 
 || available || tinyint(1) || 否 || 0 || 可用 || 
@@ -781,7 +878,9 @@ cdb_plugins插件表
 
 
 cdb_pluginvars插件变量表
+
 表说明：记录插件变量信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || pluginvarid || mediumint(8) || 否 || 主键，插件变量编号，自增 || 
 || pluginid || smallint(6) || 否 || 0 || 索引，所属插件pluginid || 
@@ -795,7 +894,9 @@ cdb_pluginvars插件变量表
 
 
 cdb_pms站内短信息表
+
 表说明：记录站内短消息信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || pmid || int(10) || 否 || 主键，短消息编号，自增 || 
 || msgfrom || varchar(15) || 否 || 发送者用户名 || 
@@ -810,7 +911,9 @@ cdb_pms站内短信息表
 
 
 cdb_pmsearchindex站内短信息搜索缓存表
+
 表说明：记录站内短消息搜索缓存信息。keywords为关键字+收发信人，搜索searchstring为一定规则下的搜索条件字符串。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || searchid || int(10) || 否 || 主键，搜索缓存编号，自增 || 
 || keywords || varchar(255) || 否 || 搜索关键字 || 
@@ -823,7 +926,9 @@ cdb_pmsearchindex站内短信息搜索缓存表
 
 
 cdb_polloptions投票选项表
+
 表说明：记录投票选项信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || polloptionid || int(10) || 否 || 主键，投票选项编号，自增 || 
 || tid || mediumint(8) || 否 || 0 || 索引，投票主题TID || 
@@ -834,7 +939,9 @@ cdb_polloptions投票选项表
 
 
 cdb_polls投票表
+
 表说明：记录投票信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || tid || mediumint(8) || 否 || 0 || 主键，投票主题TID || 
 || multiple || tinyint(1) || 否 || 0 || 多选 || 
@@ -844,7 +951,9 @@ cdb_polls投票表
 
 
 cdb_posts帖子表
+
 表说明：记录帖子信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || pid || int(10) || 否 || 主键，帖子编号，自增 || 
 || fid || smallint(6) || 否 || 0 || 索引，帖子所在版块FID || 
@@ -870,7 +979,9 @@ cdb_posts帖子表
 
 
 cdb_profilefields用户栏目定制表
+
 表说明：记录用户栏目定制信息。每个用户栏目在memberfields表中会建立一个对应字段用以保存数据，字段名称为field_{fieldid}。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || fieldid || smallint(6) || 否 || 主键，栏目编号，自增 || 
 || available || tinyint(1) || 否 || 0 || 索引，可用 || 
@@ -887,7 +998,9 @@ cdb_profilefields用户栏目定制表
 
 
 cdb_projects论坛方案表
+
 表说明：记录论坛方案信息。value为serialize值。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || id || smallint(6) || 否 || 主键，方案编号，自增 || 
 || name || varchar(50) || 否 || 方案名称 || 
@@ -897,7 +1010,9 @@ cdb_projects论坛方案表
 
 
 cdb_promotions论坛推广表
+
 表说明：记录论坛访问推广信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || ip || char(15) || 否 || 主键，来访者IP || 
 || uid || mediumint(8) || 否 || 0 || 推广者UID || 
@@ -905,7 +1020,9 @@ cdb_promotions论坛推广表
 
 
 cdb_ranks发帖数级别表
+
 表说明：记录发贴数级别信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || rankid || smallint(6) || 否 || 主键，发帖级别编号，自增 || 
 || ranktitle || varchar(30) || 否 || 级别头衔 || 
@@ -915,7 +1032,9 @@ cdb_ranks发帖数级别表
 
 
 cdb_ratelog帖子评分记录表
+
 表说明：记录帖子评分信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || pid || int(10) || 否 || 0 || 索引，被评分帖子PID || 
 || uid || mediumint(8) || 否 || 0 || 评分者UID || 
@@ -927,7 +1046,9 @@ cdb_ratelog帖子评分记录表
 
 
 cdb_regips限制注册IP表
+
 表说明：开启IP注册间隔限制等功能时，记录注册IP信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || ip || char(15) || 否 || 索引，注册IP || 
 || dateline || int(10) || 否 || 0 || 注册时间 || 
@@ -935,7 +1056,9 @@ cdb_regips限制注册IP表
 
 
 cdb_relatedthreads相关主题表
+
 表说明：记录相关主题信息。relatedthreads为serialize值。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || tid || mediumint(8) || 否 || 0 || 关联主键，主题TID || 
 || type || enum('general', || 'trade') || 否 || general || 关联主键，相关类型（general=站内 || trade=站外） || 
@@ -945,7 +1068,9 @@ cdb_relatedthreads相关主题表
 
 
 cdb_rewardlog悬赏记录表
+
 表说明：记录悬赏信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || tid || mediumint(8) || 否 || 0 || 悬赏主题TID || 
 || authorid || mediumint(8) || 否 || 0 || 悬赏发起者UID || 
@@ -955,7 +1080,9 @@ cdb_rewardlog悬赏记录表
 
 
 cdb_rsscaches || RSS缓存表
+
 表说明：记录RSS订阅主题缓存信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || lastupdate || int(10) || 否 || 0 || 最后更新时间 || 
 || fid || smallint(6) || 否 || 0 || 索引，RSS订阅版块FID || 
@@ -968,7 +1095,9 @@ cdb_rsscaches || RSS缓存表
 
 
 cdb_searchindex搜索缓存表
+
 表说明：记录搜索主题缓存信息。keywords为关键字+作者，搜索searchstring为一定规则下的搜索条件字符串。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || searchid || int(10) || 否 || 主键，搜索缓存编号，自增 || 
 || keywords || varchar(255) || 否 || 搜索关键字 || 
@@ -983,7 +1112,9 @@ cdb_searchindex搜索缓存表
 
 
 cdb_sessions会话表
+
 表说明：记录论坛访问会话信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || sid || char(6) || 否 || 唯一，会话编号 || 
 || ip1 || tinyint(3) || 否 || 0 || ip字段1 || 
@@ -1006,14 +1137,18 @@ cdb_sessions会话表
 
 
 cdb_settings论坛设置表
+
 表说明：记录论坛设置信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || variable || varchar(32) || 否 || 主键，论坛设置变量名 || 
 || value || text || 否 || 论坛设置变量值 || 
 
 
 cdb_smilies表情表
+
 表说明：记录表情信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || id || smallint(6) || 否 || 主键，表情编号，自增 || 
 || typeid || smallint(6) || 否 || 表情分类typeid || 
@@ -1024,7 +1159,9 @@ cdb_smilies表情表
 
 
 cdb_spacecaches || minispace缓存表
+
 表说明：记录minispace缓存信息。value为serialize值。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 关联主键，空间用户UID || 
 || variable || varchar(20) || 否 || 关联主键，空间缓存变量名 || 
@@ -1033,7 +1170,9 @@ cdb_spacecaches || minispace缓存表
 
 
 cdb_stats统计表
+
 表说明：记录论坛基本统计信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || type || char(10) || 否 || 关联主键，统计类别 || 
 || variable || char(10) || 否 || 关联主键，统计变量名 || 
@@ -1041,7 +1180,9 @@ cdb_stats统计表
 
 
 cdb_statvars统计变量表
+
 表说明：记录论坛统计信息。Value根据统计类别不同可能为serialize值。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || type || varchar(20) || 否 || 关联主键，统计类别 || 
 || variable || varchar(20) || 否 || 关联主键，统计变量名 || 
@@ -1049,7 +1190,9 @@ cdb_statvars统计变量表
 
 
 cdb_styles风格表
+
 表说明：记录风格信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || styleid || smallint(6) || 否 || 主键，风格编号，自增 || 
 || name || varchar(20) || 否 || 风格名称 || 
@@ -1058,7 +1201,9 @@ cdb_styles风格表
 
 
 cdb_stylevars风格变量表
+
 表说明：记录风格变量信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || stylevarid || smallint(6) || 否 || 主键，风格变量编号，自增 || 
 || styleid || smallint(6) || 否 || 0 || 索引，所属风格STYLEID || 
@@ -1067,7 +1212,9 @@ cdb_stylevars风格变量表
 
 
 cdb_subscriptions订阅表
+
 表说明：记录订阅主题信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 关联主键，订阅者UID || 
 || tid || mediumint(8) || 否 || 0 || 关联主键，订阅主题TID || 
@@ -1076,7 +1223,9 @@ cdb_subscriptions订阅表
 
 
 cdb_tags标签表
+
 表说明：记录标签信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || tagname || char(20) || 否 || 主键，标签名 || 
 || closed || tinyint(1) || 否 || 0 || 索引，标签关闭 || 
@@ -1084,7 +1233,9 @@ cdb_tags标签表
 
 
 cdb_templates模版表
+
 表说明：记录模板信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || templateid || smallint(6) || 否 || 主键，模板编号，自增 || 
 || name || varchar(30) || 否 || 模板名称 || 
@@ -1093,7 +1244,9 @@ cdb_templates模版表
 
 
 cdb_threads主题表
+
 表说明：记录主题信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || tid || mediumint(8) || 否 || 主键，主题编号，自增 || 
 || fid || smallint(6) || 否 || 0 || 主题所在版块FID || 
@@ -1124,7 +1277,9 @@ cdb_threads主题表
 
 
 cdb_threadsmod主题管理记录表
+
 表说明：记录主题管理操作信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || tid || mediumint(8) || 否 || 0 || 索引，被管理主题TID || 
 || uid || mediumint(8) || 否 || 0 || 管理者UID || 
@@ -1137,14 +1292,18 @@ cdb_threadsmod主题管理记录表
 
 
 cdb_threadtags主题标签表
+
 表说明：记录主题标签关联信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || tagname || char(20) || 否 || 索引，标签名称 || 
 || tid || int(10) || 否 || 索引，主题TID || 
 
 
 cdb_threadtypes主题分类表
+
 表说明：记录主题分类信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || typeid || smallint(6) || 否 || 主键，主题分类编号，自增 || 
 || displayorder || tinyint(3) || 否 || 0 || 显示顺序 || 
@@ -1157,7 +1316,9 @@ cdb_threadtypes主题分类表
 
 
 cdb_tradecomments交易评价表
+
 表说明：记录交易双方评价信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || id || mediumint(8) || 否 || 主键，交易评价编号，自增 || 
 || orderid || char(32) || 否 || 索引，订单编号 || 
@@ -1174,7 +1335,9 @@ cdb_tradecomments交易评价表
 
 
 cdb_tradelog交易记录表
+
 表说明：记录交易记录信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || tid || mediumint(8) || 否 || 索引，交易主题TID || 
 || pid || int(10) || 否 || 索引，交易贴PID || 
@@ -1211,7 +1374,9 @@ cdb_tradelog交易记录表
 
 
 cdb_tradeoptionvars交易项目变量表
+
 表说明：记录交易项目变量信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || typeid || smallint(6) || 否 || 0 || 索引，商品分类typeid || 
 || pid || mediumint(8) || 否 || 0 || 索引，交易贴PID || 
@@ -1220,7 +1385,9 @@ cdb_tradeoptionvars交易项目变量表
 
 
 cdb_trades交易表
+
 表说明：记录交易信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || tid || mediumint(8) || 否 || 关联主键，交易主题TID || 
 || pid || int(10) || 否 || 关联主键，交易贴PID || 
@@ -1251,7 +1418,9 @@ cdb_trades交易表
 
 
 cdb_typemodels分类信息模型表
+
 表说明：记录分类信息模型信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || id || smallint(6) || 否 || 主键，分类模型编号，自增 || 
 || name || varchar(20) || 否 || 模型名称 || 
@@ -1262,7 +1431,9 @@ cdb_typemodels分类信息模型表
 
 
 cdb_typeoptions分类信息项目表
+
 表说明：记录分类信息项目信息。rules为serialize值。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || optionid || smallint(6) || 否 || 主键，分类信息项目编号，自增 || 
 || classid || smallint(6) || 否 || 0 || 所属类别ID（上级项目optionid） || 
@@ -1275,7 +1446,9 @@ cdb_typeoptions分类信息项目表
 
 
 cdb_typeoptionvars分类信息项目变量表
+
 表说明：记录分类信息项目变量信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || typeid || smallint(6) || 否 || 0 || 索引，分类TYPEID || 
 || tid || mediumint(8) || 否 || 0 || 索引，分类主题TID || 
@@ -1285,7 +1458,9 @@ cdb_typeoptionvars分类信息项目变量表
 
 
 cdb_typevars分类信息变量表
+
 表说明：记录分类与选项关联信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || typeid || smallint(6) || 否 || 0 || 关联唯一索引，索引，分类TYPEID || 
 || optionid || smallint(6) || 否 || 0 || 关联唯一索引，分类信息项目OPTIONID || 
@@ -1297,7 +1472,9 @@ cdb_typevars分类信息变量表
 
 
 cdb_usergroups用户组表
+
 表说明：记录用户组及其权限信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || groupid || smallint(6) || 否 || 主键，用户组编号，自增 || 
 || radminid || tinyint(3) || 否 || 0 || 关联管理权 || 
@@ -1370,7 +1547,9 @@ cdb_usergroups用户组表
 
 
 cdb_validating用户审核表
+
 表说明：记录审核信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || uid || mediumint(8) || 否 || 0 || 主键，审核用户UID || 
 || submitdate || int(10) || 否 || 0 || 提交时间 || 
@@ -1383,7 +1562,9 @@ cdb_validating用户审核表
 
 
 cdb_videos视频表
+
 表说明：记录视频主题信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || vid || varchar(16) || 否 || 关联唯一索引，主键，视频编号 || 
 || uid || mediumint(8) || 否 || 0 || 关联唯一索引，发布者UID || 
@@ -1401,7 +1582,9 @@ cdb_videos视频表
 
 
 cdb_videotags视频标签表
+
 表说明：记录视频标签信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || tagname || char(10) || 否 || 关联唯一索引，标签名称 || 
 || vid || char(14) || 否 || 关联唯一索引，视频VID || 
@@ -1409,7 +1592,9 @@ cdb_videotags视频标签表
 
 
 cdb_words词语过滤表
+
 表说明：记录词语过滤信息。
+
 || 字段 || 类型 || Null || 默认 || 注释 || 
 || id || smallint(6) || 否 || 主键，词语过滤编号 || 
 || admin || varchar(15) || 否 || 管理员用户名 || 
