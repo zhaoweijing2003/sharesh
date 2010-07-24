@@ -2,77 +2,123 @@
 
 ===各表概述===
 
-cdb_access--当某用户对某些版块有特定的权限的时候，该表记录了该用户在这些版块有什么权限。
+cdb_access             用户权限表   
 
-cdb_admingroups--管理模组信息表
+cdb_adminactions       管理动作表
 
-cdb_adminsessions--后台管理登录记录
+cdb_admingroups           管理组数据表
 
-cdb_announcements--论坛公告信息
+cdb_adminnotes          管理员留言  
 
-cdb_attachments--附件信息表
+cdb_adminsessions       管理员后台在线记录
 
-cdb_attachtypes--附件的所性类型（即后台的附件类型设置，如果没有设置，默认为空。）
+cdb_advertisements        广告资料表
 
-cdb_banned--IP禁止信息表
+cdb_announcements       论坛公告资料表
 
-cdb_bbcodes--Discuz!代码信息表
+cdb_attachments           附件资料表
 
-cdb_buddys--会员的好友列表
+cdb_attachtypes           附件类型表
 
-cdb_caches--统计页面的缓存
+cdb_banned             被禁止的ip列表
 
-cdb_failedlogins--非法登录后台的记录
+cdb_bbcodes             bb代码资料表
 
-cdb_favorites--记录用户收藏主题的相关信息
+cdb_blogcaches          博客缓存表
 
-cdb_forumlinks--联盟论坛
+cdb_buddys             好友信息表
 
-cdb_forums--论坛版块信息表
+cdb_creditslog          积分交易记录表
 
-cdb_karmalog--用户评分记录
+cdb_crons                 计划任务表
 
-cdb_members--论坛所有会员主信息表
+cdb_failedlogins       错误登录记录
 
-cdb_onlinelist--在线会员信息
+cdb_favorites          个人收藏信息表
 
-cdb_plugins--插件信息表
+cdb_forumfields           板块扩展信息数据表
 
-cdb_plugins_settings--插件的配置设置信息相关
+cdb_forumlinks          友情链接数据表
 
-cdb_pms--论坛短信数据表
+cdb_forums             版块资料表
 
-cdb_polls--投票内容信息表
+cdb_medals             勋章资料表
 
-cdb_posts--论坛所有贴子信息表
+cdb_memberfields       用户扩展资料表
 
-cdb_ranks--用户发贴等级记录
+cdb_members             用户基本资料表
 
-cdb_searchindex--搜索结果缓存
+cdb_moderators          版主信息数据表
 
-cdb_sessions--在线用户信息表（临时表）
+cdb_modworks              版主工作记录表
 
-cdb_settings--论坛基本设置相关。（包括后台基本设置、注册人数、最多在线人数、功能、其它设置
+cdb_onlinelist          在线列表定制
 
-等等。）
+cdb_onlinetime          用户在线时间信息表
 
-cdb_smilies--表情设置
+cdb_orders             订单数据表
 
-cdb_stats--论坛统计信息
+cdb_paymentlog          支付记录
 
-cdb_styles--风格信息表
+cdb_pluginhooks           插件钩子表
 
-cdb_stylevars--风格的配置信息
+cdb_plugins             插件表
 
-cdb_subscriptions--记录订阅主题的相关信息
+cdb_pluginvars          插件配置表
 
-cdb_templates--模板信息表
+cdb_pms                短信资料表
 
-cdb_threads--论坛所有主题信息表
+cdb_pmsearchindex       短消息搜索缓存表
 
-cdb_usergroups--用户组主信息表
+cdb_polls                 投票帖资料表
 
-cdb_words--不良词语过滤
+cdb_posts                 帖子资料表
+
+cdb_profilefields       用户栏目定制
+
+cdb_promotions          论坛推广
+
+cdb_ranks                 头衔表
+
+cdb_ratelog             帖子评分记录表
+
+cdb_regips             注册ip记录表
+
+cdb_relatedthreads        相关主题
+
+cdb_rsscaches          RSS缓存
+
+cdb_searchindex           搜索缓存
+
+cdb_sessions              在线表
+
+cdb_settings              论坛设置表
+
+cdb_smilies             表情信息表
+
+cdb_stats             统计数据表
+
+cdb_statvars              统计变量表
+
+cdb_styles             风格
+
+cdb_stylevars          风格变量表
+
+cdb_subscrīptions       订阅信息表
+
+cdb_templates          模板
+
+cdb_threads             主题资料表
+
+cdb_threadsmod          主题管理记录表
+
+cdb_threadtypes           主题分类表      
+
+cdb_usergroups          用户组数据表
+
+cdb_validating          等待人工审核的会员记录
+
+cdb_words                 词语过滤表
 
 
 
