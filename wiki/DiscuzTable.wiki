@@ -80,2488 +80,2488 @@ cdb_words--不良词语过滤
 
 ===discuz数据字典(一)===
 
-cdb_access 用户版块权限表   
+cdb_access用户版块权限表
 
-表说明：设置某一用户对某一版块的用户权限。   
+表说明：设置某一用户对某一版块的用户权限。
 
-字段 类型 Null 默认 注释
+字段||类型||Null||默认||注释
 
-uid mediumint(8) 否 0 关联主键，特殊用户的UID
+uid||mediumint(8)||否||0||关联主键，特殊用户的UID
 
-fid smallint(6) 否 0 关联主键，版块的FID
+fid||smallint(6)||否||0||关联主键，版块的FID
 
-allowview tinyint(1) 否 0 浏览版块许可
+allowview||tinyint(1)||否||0||浏览版块许可
 
-allowpost tinyint(1) 否 0 发新话题许可
+allowpost||tinyint(1)||否||0||发新话题许可
 
-allowreply tinyint(1) 否 0 发表回复许可
+allowreply||tinyint(1)||否||0||发表回复许可
 
-allowgetattach tinyint(1) 否 0 下载/查看附件许可
+allowgetattach||tinyint(1)||否||0||下载/查看附件许可
 
-allowpostattach tinyint(1) 否 0 上传附件许可
+allowpostattach||tinyint(1)||否||0||上传附件许可
 
-   
 
-cdb_activities活动表   
 
-表说明：记录活动主题的活动相关数据。   
+cdb_activities活动表
 
-字段 类型 Null 默认 注释
+表说明：记录活动主题的活动相关数据。
 
-tid mediumint(8) 否 0 主键，活动主题的TID
+字段||类型||Null||默认||注释
 
-uid mediumint(8) 否 0 索引，发布活动者UID
+tid||mediumint(8)||否||0||主键，活动主题的TID
 
-cost mediumint(8) 否 0 每人花销
+uid||mediumint(8)||否||0||索引，发布活动者UID
 
-starttimefrom int(10) 否 0 开始时间（起始点）
+cost||mediumint(8)||否||0||每人花销
 
-starttimeto int(10) 否 0 开始时间（终止点，如确定开始时间则为0）
+starttimefrom||int(10)||否||0||开始时间（起始点）
 
-place char(40) 否   活动地点
+starttimeto||int(10)||否||0||开始时间（终止点，如确定开始时间则为0）
 
-class char(20) 否   活动类别
+place||char(40)||否活动地点
 
-gender tinyint(1) 否 0 性别要求（0=不限,1=男,2=女）
+class||char(20)||否活动类别
 
-number smallint(5) 否 0 需要人数
+gender||tinyint(1)||否||0||性别要求（0=不限,1=男,2=女）
 
-expiration int(10) 否 0 征集截止日期
+number||smallint(5)||否||0||需要人数
 
-   
+expiration||int(10)||否||0||征集截止日期
 
-cdb_activityapplies活动申请表   
 
-表说明：记录参与活动主题的申请数据。   
 
-字段 类型 Null 默认 注释
+cdb_activityapplies活动申请表
 
-applyid int(10) 否   主键，活动申请编号，自增
+表说明：记录参与活动主题的申请数据。
 
-tid mediumint(8) 否 0 索引，活动主题的TID
+字段||类型||Null||默认||注释
 
-username char(15) 否   申请者的用户名
+applyid||int(10)||否主键，活动申请编号，自增
 
-uid mediumint(8) 否 0 索引，申请者的UID
+tid||mediumint(8)||否||0||索引，活动主题的TID
 
-message char(200) 否   申请者留言
+username||char(15)||否申请者的用户名
 
-verified tinyint(1) 否 0 审核
+uid||mediumint(8)||否||0||索引，申请者的UID
 
-dateline int(10) 否 0 索引，申请时间
+message||char(200)||否申请者留言
 
-payment mediumint(8) 否 0 申请者支付费用
+verified||tinyint(1)||否||0||审核
 
-contact char(200) 否   申请者联系方式
+dateline||int(10)||否||0||索引，申请时间
 
-   
+payment||mediumint(8)||否||0||申请者支付费用
 
-cdb_adminactions关联管理员权限表   
+contact||char(200)||否申请者联系方式
 
-表说明：当特殊用户组管理权限关联为管理员时，记录该组无权使用的功能。   
 
-字段 类型 Null 默认 注释
 
-admingid smallint(6) 否 0 主键，关联为管理员的用户组GID
+cdb_adminactions关联管理员权限表
 
-disabledactions text 否   关联后的受限功能
+表说明：当特殊用户组管理权限关联为管理员时，记录该组无权使用的功能。
 
-   
+字段||类型||Null||默认||注释
 
-cdb_admingroups管理组表   
+admingid||smallint(6)||否||0||主键，关联为管理员的用户组GID
 
-表说明：记录管理组的管理权限。   
+disabledactions||text||否关联后的受限功能
 
-字段 类型 Null 默认 注释
 
-admingid smallint(6) 否 0 主键，管理组GID
 
-alloweditpost tinyint(1) 否 0 允许编辑帖子
+cdb_admingroups管理组表
 
-alloweditpoll tinyint(1) 否 0 允许编辑投票
+表说明：记录管理组的管理权限。
 
-allowstickthread tinyint(1) 否 0 允许置顶帖子（最高置顶等级）
+字段||类型||Null||默认||注释
 
-allowmodpost tinyint(1) 否 0 允许审核帖子
+admingid||smallint(6)||否||0||主键，管理组GID
 
-allowdelpost tinyint(1) 否 0 允许删除帖子
+alloweditpost||tinyint(1)||否||0||允许编辑帖子
 
-allowmassprune tinyint(1) 否 0 允许批量删贴
+alloweditpoll||tinyint(1)||否||0||允许编辑投票
 
-allowrefund tinyint(1) 否 0 允许强制退款
+allowstickthread||tinyint(1)||否||0||允许置顶帖子（最高置顶等级）
 
-allowcensorword tinyint(1) 否 0 允许过滤词语
+allowmodpost||tinyint(1)||否||0||允许审核帖子
 
-allowviewip tinyint(1) 否 0 允许查看IP
+allowdelpost||tinyint(1)||否||0||允许删除帖子
 
-allowbanip tinyint(1) 否 0 允许禁止IP
+allowmassprune||tinyint(1)||否||0||允许批量删贴
 
-allowedituser tinyint(1) 否 0 允许编辑用户
+allowrefund||tinyint(1)||否||0||允许强制退款
 
-allowmoduser tinyint(1) 否 0 允许审核用户
+allowcensorword||tinyint(1)||否||0||允许过滤词语
 
-allowbanuser tinyint(1) 否 0 允许禁止用户
+allowviewip||tinyint(1)||否||0||允许查看IP
 
-allowpostannounce tinyint(1) 否 0 允许发布公告
+allowbanip||tinyint(1)||否||0||允许禁止IP
 
-allowviewlog tinyint(1) 否 0 允许查看记录
+allowedituser||tinyint(1)||否||0||允许编辑用户
 
-allowbanpost tinyint(1) 否 0 允许屏蔽帖子
+allowmoduser||tinyint(1)||否||0||允许审核用户
 
-disablepostctrl tinyint(1) 否 0 发帖不受限制
+allowbanuser||tinyint(1)||否||0||允许禁止用户
 
-supe_allowpushthread tinyint(1) 否 0 允许推送主题到SS
+allowpostannounce||tinyint(1)||否||0||允许发布公告
 
-   
+allowviewlog||tinyint(1)||否||0||允许查看记录
 
-cdb_adminnotes后台管理公告表   
+allowbanpost||tinyint(1)||否||0||允许屏蔽帖子
 
-表说明：记录后台管理公告。   
+disablepostctrl||tinyint(1)||否||0||发帖不受限制
 
-字段 类型 Null 默认 注释
+supe_allowpushthread||tinyint(1)||否||0||允许推送主题到SS
 
-id mediumint(8) 否   主键，后台管理公告编号，自增
 
-admin varchar(15) 否   公告发布者用户名
 
-access tinyint(3) 否 0 公告查看权限级别
+cdb_adminnotes后台管理公告表
 
-adminid tinyint(3) 否 0 公告发布者UID
+表说明：记录后台管理公告。
 
-dateline int(10) 否 0 公告发布时间
+字段||类型||Null||默认||注释
 
-expiration int(10) 否 0 公告有效期
+id||mediumint(8)||否主键，后台管理公告编号，自增
 
-message text 否   公告内容
+admin||varchar(15)||否公告发布者用户名
 
-   
+access||tinyint(3)||否||0||公告查看权限级别
 
-cdb_adminsessions后台会话表   
+adminid||tinyint(3)||否||0||公告发布者UID
 
-表说明：记录后台会话。   
+dateline||int(10)||否||0||公告发布时间
 
-字段 类型 Null 默认 注释
+expiration||int(10)||否||0||公告有效期
 
-uid mediumint(8) 否 0 登录后台用户UID
+message||text||否公告内容
 
-ip char(15) 否   登录者IP
 
-dateline int(10) 否 0 最后活动时间
 
-errorcount tinyint(1) 否 0 登录密码错误计数
+cdb_adminsessions后台会话表
 
-   
+表说明：记录后台会话。
 
-cdb_advertisements广告表   
+字段||类型||Null||默认||注释
 
-表说明：记录广告相关信息，广告参数为不同类型广告设置的参数及内容的serialize值，广告代码为根据广告参数生成的HTML。   
+uid||mediumint(8)||否||0||登录后台用户UID
 
-字段 类型 Null 默认 注释
+ip||char(15)||否登录者IP
 
-advid mediumint(8) 否   主键，广告编号，自增
+dateline||int(10)||否||0||最后活动时间
 
-available tinyint(1) 否 0 广告可用
+errorcount||tinyint(1)||否||0||登录密码错误计数
 
-type varchar(50) 否 0 广告类型
 
-displayorder tinyint(3) 否 0 广告显示顺序
 
-title varchar(50) 否   广告标题
+cdb_advertisements广告表
 
-targets text 否   广告投放范围
+表说明：记录广告相关信息，广告参数为不同类型广告设置的参数及内容的serialize值，广告代码为根据广告参数生成的HTML。
 
-parameters text 否   广告参数
+字段||类型||Null||默认||注释
 
-code text 否   广告代码
+advid||mediumint(8)||否主键，广告编号，自增
 
-starttime int(10) 否 0 广告起始时间
+available||tinyint(1)||否||0||广告可用
 
-endtime int(10) 否 0 广告起始时间
+type||varchar(50)||否||0||广告类型
 
-   
+displayorder||tinyint(3)||否||0||广告显示顺序
 
-cdb_announcements公告表   
+title||varchar(50)||否广告标题
 
-表说明：记录论坛公告信息。   
+targets||text||否广告投放范围
 
-字段 类型 Null 默认 注释
+parameters||text||否广告参数
 
-id smallint(6) 否   主键，公告编号，自增
+code||text||否广告代码
 
-author varchar(15) 否   公告发布者用户名
+starttime||int(10)||否||0||广告起始时间
 
-subject varchar(250) 否   公告标题
+endtime||int(10)||否||0||广告起始时间
 
-type tinyint(1) 否 0 公告类型（0=文字 1=链接 2=消息）
 
-displayorder tinyint(3) 否 0 公告显示顺序
 
-starttime int(10) 否 0 公告起始时间
+cdb_announcements公告表
 
-endtime int(10) 否 0 公告终止时间
+表说明：记录论坛公告信息。
 
-message text 否   公告内容
+字段||类型||Null||默认||注释
 
-groups text 否   公告受众用户组
+id||smallint(6)||否主键，公告编号，自增
 
-   
+author||varchar(15)||否公告发布者用户名
 
-cdb_attachments附件表   
+subject||varchar(250)||否公告标题
 
-表说明：记录帖子附件信息，filetype会因浏览器不同有所区别，filesize为服务器实际保存的文件大小。   
+type||tinyint(1)||否||0||公告类型（0=文字||1=链接||2=消息）
 
-字段 类型 Null 默认 注释
+displayorder||tinyint(3)||否||0||公告显示顺序
 
-aid mediumint(8) 否   主键，附件编号，自增
+starttime||int(10)||否||0||公告起始时间
 
-tid mediumint(8) 否 0 索引，附件所在主题TID
+endtime||int(10)||否||0||公告终止时间
 
-pid int(10) 否 0 索引，附件所在帖子PID
+message||text||否公告内容
 
-dateline int(10) 否 0 附件发布时间
+groups||text||否公告受众用户组
 
-readperm tinyint(3) 否 0 附件阅读权限
 
-price smallint(6) 否 0 附件售价
 
-filename char(100) 否   附件文件名
+cdb_attachments附件表
 
-description char(100) 否   附件简介
+表说明：记录帖子附件信息，filetype会因浏览器不同有所区别，filesize为服务器实际保存的文件大小。
 
-filetype char(50) 否   附件文件类型（MIME Content-Type）
+字段||类型||Null||默认||注释
 
-filesize int(10) 否 0 附件文件大小（字节）
+aid||mediumint(8)||否主键，附件编号，自增
 
-attachment char(100) 否   附件URL
+tid||mediumint(8)||否||0||索引，附件所在主题TID
 
-downloads mediumint(8) 否 0 附件下载次数
+pid||int(10)||否||0||索引，附件所在帖子PID
 
-isimage tinyint(1) 否 0 图片附件
+dateline||int(10)||否||0||附件发布时间
 
-uid mediumint(8) 否 0 索引，附件上传者UID
+readperm||tinyint(3)||否||0||附件阅读权限
 
-thumb tinyint(1) 否 0 生成缩略图
+price||smallint(6)||否||0||附件售价
 
-remote tinyint(1) 否 0 远程附件
+filename||char(100)||否附件文件名
 
-   
+description||char(100)||否附件简介
 
-cdb_attachpaymentlog附件付费记录表   
+filetype||char(50)||否附件文件类型（MIME||Content-Type）
 
-表说明：记录帖子附件下载付费信息。   
+filesize||int(10)||否||0||附件文件大小（字节）
 
-字段 类型 Null 默认 注释
+attachment||char(100)||否附件URL
 
-uid mediumint(8) 否 0 关联主键，下载付费用户的UID
+downloads||mediumint(8)||否||0||附件下载次数
 
-aid mediumint(8) 否 0 关联主键，索引，被下载附件的AID
+isimage||tinyint(1)||否||0||图片附件
 
-authorid mediumint(8) 否 0 索引，附件上传者UID
+uid||mediumint(8)||否||0||索引，附件上传者UID
 
-dateline int(10) 否 0 付费时间
+thumb||tinyint(1)||否||0||生成缩略图
 
-amount int(10) 否 0 付费总金额
+remote||tinyint(1)||否||0||远程附件
 
-netamount int(10) 否 0 税后金额
 
-   
 
-cdb_attachtypes附件类型表   
+cdb_attachpaymentlog附件付费记录表
 
-表说明：记录允许使用的附件类型信息。   
+表说明：记录帖子附件下载付费信息。
 
-字段 类型 Null 默认 注释
+字段||类型||Null||默认||注释
 
-id smallint(6) 否   主键，附件类型编号，自增
+uid||mediumint(8)||否||0||关联主键，下载付费用户的UID
 
-extension char(12) 否   附件类型扩展名
+aid||mediumint(8)||否||0||关联主键，索引，被下载附件的AID
 
-maxsize int(10) 否 0 附件最大尺寸
+authorid||mediumint(8)||否||0||索引，附件上传者UID
 
-   
+dateline||int(10)||否||0||付费时间
 
-cdb_banned禁止IP表   
+amount||int(10)||否||0||付费总金额
 
-表说明：记录禁止IP操作信息。   
+netamount||int(10)||否||0||税后金额
 
-字段 类型 Null 默认 注释
 
-id smallint(6) 否   主键，禁止IP操作编号，自增
 
-ip1 smallint(3) 否 0 ip字段1
+cdb_attachtypes附件类型表
 
-ip2 smallint(3) 否 0 ip字段2
+表说明：记录允许使用的附件类型信息。
 
-ip3 smallint(3) 否 0 ip字段3
+字段||类型||Null||默认||注释
 
-ip4 smallint(3) 否 0 ip字段4
+id||smallint(6)||否主键，附件类型编号，自增
 
-admin varchar(15) 否   操作者用户名
+extension||char(12)||否附件类型扩展名
 
-dateline int(10) 否 0 操作时间
+maxsize||int(10)||否||0||附件最大尺寸
 
-expiration int(10) 否 0 禁止有效期
 
-   
 
-cdb_bbcodes 自定义代码表   
+cdb_banned禁止IP表
 
-表说明：记录自定义Discuz!代码信息。   
+表说明：记录禁止IP操作信息。
 
-字段 类型 Null 默认 注释
+字段||类型||Null||默认||注释
 
-id mediumint(8) 否   主键，代码编号，自增
+id||smallint(6)||否主键，禁止IP操作编号，自增
 
-available tinyint(1) 否 0 代码可用
+ip1||smallint(3)||否||0||ip字段1
 
-tag varchar(100) 否   代码标签
+ip2||smallint(3)||否||0||ip字段2
 
-icon varchar(255) 否   代码图标文件
+ip3||smallint(3)||否||0||ip字段3
 
-replacement text 否   代码替换内容
+ip4||smallint(3)||否||0||ip字段4
 
-example varchar(255) 否   代码例子
+admin||varchar(15)||否操作者用户名
 
-explanation text 否   代码解释
+dateline||int(10)||否||0||操作时间
 
-params tinyint(1) 否 1 代码参数个数
+expiration||int(10)||否||0||禁止有效期
 
-prompt text 否   代码参数提示语
 
-nest tinyint(3) 否 1 代码嵌套次数
 
-   
+cdb_bbcodes||自定义代码表
 
-cdb_buddys好友表   
+表说明：记录自定义Discuz!代码信息。
 
-表说明：记录用户好友信息。   
+字段||类型||Null||默认||注释
 
-字段 类型 Null 默认 注释
+id||mediumint(8)||否主键，代码编号，自增
 
-uid mediumint(8) 否 0 索引，添加好友者UID
+available||tinyint(1)||否||0||代码可用
 
-buddyid mediumint(8) 否 0 好友UID
+tag||varchar(100)||否代码标签
 
-grade tinyint(3) 否 1 好友等级（SS相关）
+icon||varchar(255)||否代码图标文件
 
-dateline int(10) 否 0 添加好友时间
+replacement||text||否代码替换内容
 
-description char(255) 否   好友备注
+example||varchar(255)||否代码例子
 
-   
+explanation||text||否代码解释
 
-cdb_caches缓存数据表   
+params||tinyint(1)||否||1||代码参数个数
 
-表说明：记录缓存更新数据。   
+prompt||text||否代码参数提示语
 
-字段 类型 Null 默认 注释
+nest||tinyint(3)||否||1||代码嵌套次数
 
-cachename varchar(32) 否   主键，缓存名称
 
-type tinyint(3) 否   缓存类型（SS相关）
 
-dateline int(10) 否   最后更新时间
+cdb_buddys好友表
 
-expiration int(10) 否   有效期
+表说明：记录用户好友信息。
 
-data mediumtext 否   缓存数据
+字段||类型||Null||默认||注释
 
-   
+uid||mediumint(8)||否||0||索引，添加好友者UID
 
-cdb_campaigns Insenz活动表   
+buddyid||mediumint(8)||否||0||好友UID
 
-表说明：略。   
+grade||tinyint(3)||否||1||好友等级（SS相关）
 
-字段 类型 Null 默认 注释
+dateline||int(10)||否||0||添加好友时间
 
-id mediumint(8) 否
+description||char(255)||否好友备注
 
-type tinyint(1) 否
 
-fid smallint(6) 否
 
-tid mediumint(8) 否
+cdb_caches缓存数据表
 
-status tinyint(1) 否 0
+表说明：记录缓存更新数据。
 
-begintime int(10) 否
+字段||类型||Null||默认||注释
 
-starttime int(10) 否
+cachename||varchar(32)||否主键，缓存名称
 
-endtime int(10) 否
+type||tinyint(3)||否缓存类型（SS相关）
 
-expiration int(10) 否
+dateline||int(10)||否最后更新时间
 
-nextrun int(10) 否
+expiration||int(10)||否有效期
 
-   
+data||mediumtext||否缓存数据
 
-cdb_creditslog积分交易记录表   
 
-表说明：记录积分交易信息，包括积分转帐、积分兑换等操作。   
 
-字段 类型 Null 默认 注释
+cdb_campaigns||Insenz活动表
 
-uid mediumint(8) 否 0 索引，操作用户UID
+表说明：略。
 
-fromto char(15) 否   目标用户的用户名
+字段||类型||Null||默认||注释
 
-sendcredits tinyint(1) 否 0 支出积分类型
+id||mediumint(8)||否
 
-receivecredits tinyint(1) 否 0 收入积分类型
+type||tinyint(1)||否
 
-send int(10) 否 0 支出额
+fid||smallint(6)||否
 
-receive int(10) 否 0 收入额
+tid||mediumint(8)||否
 
-dateline int(10) 否 0 交易时间
+status||tinyint(1)||否||0
 
-operation char(3) 否   操作代码
+begintime||int(10)||否
 
-   
+starttime||int(10)||否
 
-cdb_crons计划任务表   
+endtime||int(10)||否
 
-表说明：记录计划任务信息。   
+expiration||int(10)||否
 
-字段 类型 Null 默认 注释
+nextrun||int(10)||否
 
-cronid smallint(6) 否   主键，计划任务编号，自增
 
-available tinyint(1) 否 0 计划任务可用
 
-type enum('user', 'system') 否 user 计划任务类型（user=自定义 system=系统）
+cdb_creditslog积分交易记录表
 
-name char(50) 否   计划任务名称
+表说明：记录积分交易信息，包括积分转帐、积分兑换等操作。
 
-filename char(50) 否   计划任务脚本文件名
+字段||类型||Null||默认||注释
 
-lastrun int(10) 否 0 上次执行时间
+uid||mediumint(8)||否||0||索引，操作用户UID
 
-nextrun int(10) 否 0 下次执行时间
+fromto||char(15)||否目标用户的用户名
 
-weekday tinyint(1) 否 0 执行时间：星期
+sendcredits||tinyint(1)||否||0||支出积分类型
 
-day tinyint(2) 否 0 执行时间：日
+receivecredits||tinyint(1)||否||0||收入积分类型
 
-hour tinyint(2) 否 0 执行时间：小时
+send||int(10)||否||0||支出额
 
-minute char(36) 否   执行时间：分钟
+receive||int(10)||否||0||收入额
 
-   
+dateline||int(10)||否||0||交易时间
 
-cdb_debateposts辩论观点表   
+operation||char(3)||否操作代码
 
-表说明：记录辩论观点信息。   
 
-字段 类型 Null 默认 注释
 
-pid int(10) 否 0 主键，索引，发布观点的帖子PID
+cdb_crons计划任务表
 
-stand tinyint(1) 否 0 观点属性（0=中立 1=正方 2=反方）
+表说明：记录计划任务信息。
 
-tid mediumint(8) 否 0 索引，辩论主题TID
+字段||类型||Null||默认||注释
 
-uid mediumint(8) 否 0 观点发布者UID
+cronid||smallint(6)||否主键，计划任务编号，自增
 
-dateline int(10) 否 0 发布时间
+available||tinyint(1)||否||0||计划任务可用
 
-voters mediumint(10) 否 0 支持人数
+type||enum('user',||'system')||否||user||计划任务类型（user=自定义||system=系统）
 
-voterids text 否   支持者UID组（\t分隔）
+name||char(50)||否计划任务名称
 
-   
+filename||char(50)||否计划任务脚本文件名
 
-cdb_debates辩论主题表   
+lastrun||int(10)||否||0||上次执行时间
 
-表说明：记录辩论主题信息。   
+nextrun||int(10)||否||0||下次执行时间
 
-字段 类型 Null 默认 注释
+weekday||tinyint(1)||否||0||执行时间：星期
 
-tid mediumint(8) 否 0 主键，辩论主题TID
+day||tinyint(2)||否||0||执行时间：日
 
-uid mediumint(8) 否 0 索引，辩论发起者UID
+hour||tinyint(2)||否||0||执行时间：小时
 
-starttime int(10) 否 0 辩论发起时间
+minute||char(36)||否执行时间：分钟
 
-endtime int(10) 否 0 辩论截止时间
 
-affirmdebaters mediumint(8) 否 0 正方辩手人数
 
-negadebaters mediumint(8) 否 0 反方辩手人数
+cdb_debateposts辩论观点表
 
-affirmvotes mediumint(8) 否 0 正方支持得票
+表说明：记录辩论观点信息。
 
-negavotes mediumint(8) 否 0 反方支持得票
+字段||类型||Null||默认||注释
 
-umpire varchar(15) 否   裁判用户名
+pid||int(10)||否||0||主键，索引，发布观点的帖子PID
 
-winner tinyint(1) 否 0 获胜方（0=未结束 1=正方 2=反方 3=平局）
+stand||tinyint(1)||否||0||观点属性（0=中立||1=正方||2=反方）
 
-bestdebater varchar(50) 否   最佳辩手综合信息
+tid||mediumint(8)||否||0||索引，辩论主题TID
 
-affirmpoint text 否   正方观点
+uid||mediumint(8)||否||0||观点发布者UID
 
-negapoint text 否   反方观点
+dateline||int(10)||否||0||发布时间
 
-umpirepoint text 否   裁判观点
+voters||mediumint(10)||否||0||支持人数
 
-affirmvoterids text 否   正方支持者UID组（\t分隔）
+voterids||text||否支持者UID组（\t分隔）
 
-negavoterids text 否   反方支持者UID组（\t分隔）
 
-affirmreplies mediumint(8) 否   正方发言数
 
-negareplies mediumint(8) 否   反方发言数
+cdb_debates辩论主题表
 
-   
+表说明：记录辩论主题信息。
 
-cdb_failedlogins登录失败记录表   
+字段||类型||Null||默认||注释
 
-表说明：记录登录失败情况，成功登录后删除失败记录。   
+tid||mediumint(8)||否||0||主键，辩论主题TID
 
-字段 类型 Null 默认 注释
+uid||mediumint(8)||否||0||索引，辩论发起者UID
 
-ip char(15) 否   主键，登录失败者IP
+starttime||int(10)||否||0||辩论发起时间
 
-count tinyint(1) 否 0 登录失败次数
+endtime||int(10)||否||0||辩论截止时间
 
-lastupdate int(10) 否 0 最后一次登录失败时间
+affirmdebaters||mediumint(8)||否||0||正方辩手人数
 
-   
+negadebaters||mediumint(8)||否||0||反方辩手人数
 
-cdb_faqs论坛帮助表   
+affirmvotes||mediumint(8)||否||0||正方支持得票
 
-表说明：记录论坛帮助信息。   
+negavotes||mediumint(8)||否||0||反方支持得票
 
-字段 类型 Null 默认 注释
+umpire||varchar(15)||否裁判用户名
 
-id smallint(6) 否   主键，论坛帮助编号，自增
+winner||tinyint(1)||否||0||获胜方（0=未结束||1=正方||2=反方||3=平局）
 
-fpid smallint(6) 否 0 上级分类ID
+bestdebater||varchar(50)||否最佳辩手综合信息
 
-displayorder tinyint(3) 否 0 索引，显示顺序
+affirmpoint||text||否正方观点
 
-identifier varchar(20) 否   帮助标识
+negapoint||text||否反方观点
 
-keyword varchar(50) 否   帮助关键字
+umpirepoint||text||否裁判观点
 
-title varchar(50) 否   帮助标题
+affirmvoterids||text||否正方支持者UID组（\t分隔）
 
-message text 否   帮助内容
+negavoterids||text||否反方支持者UID组（\t分隔）
 
-   
+affirmreplies||mediumint(8)||否正方发言数
 
-cdb_favorites收藏表   
+negareplies||mediumint(8)||否反方发言数
 
-表说明：记录用户收藏的主题或版块，每条记录中tid、fid之一为0。   
 
-字段 类型 Null 默认 注释
 
-uid mediumint(8) 否 0 索引，收藏者UID
+cdb_failedlogins登录失败记录表
 
-tid mediumint(8) 否 0 被收藏的主题TID
+表说明：记录登录失败情况，成功登录后删除失败记录。
 
-fid smallint(6) 否 0 被收藏的版块FID
+字段||类型||Null||默认||注释
 
-   
+ip||char(15)||否主键，登录失败者IP
 
-cdb_forumfields论坛版块扩展表   
+count||tinyint(1)||否||0||登录失败次数
 
-表说明：记录论坛版块的扩展信息，标有*的字段为serialize值，标有**的字段为\t分隔。   
+lastupdate||int(10)||否||0||最后一次登录失败时间
 
-字段 类型 Null 默认 注释
 
-fid smallint(6) 否 0 主键，版块FID
 
-description text 否   版块简介内容
+cdb_faqs论坛帮助表
 
-password varchar(12) 否   版块访问密码
+表说明：记录论坛帮助信息。
 
-icon varchar(255) 否   版块图标
+字段||类型||Null||默认||注释
 
-postcredits varchar(255) 否   发主题积分策略
+id||smallint(6)||否主键，论坛帮助编号，自增
 
-replycredits varchar(255) 否   回复积分策略
+fpid||smallint(6)||否||0||上级分类ID
 
-getattachcredits varchar(255) 否   下载附件积分策略
+displayorder||tinyint(3)||否||0||索引，显示顺序
 
-postattachcredits varchar(255) 否   上传附件积分策略
+identifier||varchar(20)||否帮助标识
 
-digestcredits varchar(255) 否   加精华积分策略
+keyword||varchar(50)||否帮助关键字
 
-redirect varchar(255) 否   版块转向 URL
+title||varchar(50)||否帮助标题
 
-attachextensions varchar(255) 否   版块允许附件类型
+message||text||否帮助内容
 
-formulaperm text 否   版块权限表达式信息
 
-moderators text 否   版主用户名组 **
 
-rules text 否   版块规则内容
+cdb_favorites收藏表
 
-threadtypes text 否   版块使用的主题分类及参数 *
+表说明：记录用户收藏的主题或版块，每条记录中tid、fid之一为0。
 
-viewperm text 否   浏览权限用户组 **
+字段||类型||Null||默认||注释
 
-postperm text 否   发主题权限用户组 **
+uid||mediumint(8)||否||0||索引，收藏者UID
 
-replyperm text 否   回复权限用户组 **
+tid||mediumint(8)||否||0||被收藏的主题TID
 
-getattachperm text 否   附件下载权限用户组 **
+fid||smallint(6)||否||0||被收藏的版块FID
 
-postattachperm text 否   附件上传权限用户组 **
 
-keywords text 否   版块关键词
 
-supe_pushsetting text 否   SS主题推送设定 *
+cdb_forumfields论坛版块扩展表
 
-modrecommend text 否   版主推荐功能参数 *
+表说明：记录论坛版块的扩展信息，标有*的字段为serialize值，标有**的字段为\t分隔。
 
-tradetypes text 否   商品分类设定 *
+字段||类型||Null||默认||注释
 
-typemodels mediumtext 否   分类信息模型设定 *
+fid||smallint(6)||否||0||主键，版块FID
 
-   
+description||text||否版块简介内容
 
-cdb_forumlinks联盟论坛表   
+password||varchar(12)||否版块访问密码
 
-表说明：记录联盟论坛信息。   
+icon||varchar(255)||否版块图标
 
-字段 类型 Null 默认 注释
+postcredits||varchar(255)||否发主题积分策略
 
-id smallint(6) 否   主键，联盟论坛编号，自增
+replycredits||varchar(255)||否回复积分策略
 
-displayorder tinyint(3) 否 0 显示顺序
+getattachcredits||varchar(255)||否下载附件积分策略
 
-name varchar(100) 否   联盟论坛名称
+postattachcredits||varchar(255)||否上传附件积分策略
 
-url varchar(100) 否   联盟论坛 URL
+digestcredits||varchar(255)||否加精华积分策略
 
-description mediumtext 否   联盟论坛文字说明
+redirect||varchar(255)||否版块转向||URL
 
-logo varchar(100) 否   联盟论坛LOGO地址
+attachextensions||varchar(255)||否版块允许附件类型
 
-   
+formulaperm||text||否版块权限表达式信息
 
-cdb_forumrecommend版主推荐表   
+moderators||text||否版主用户名组||**
 
-表说明：记录版主推荐主题信息。   
+rules||text||否版块规则内容
 
-字段 类型 Null 默认 注释
+threadtypes||text||否版块使用的主题分类及参数||*
 
-fid smallint(6) 否   主题所在版块FID
+viewperm||text||否浏览权限用户组||**
 
-tid mediumint(8) 否   主键，推荐主题TID
+postperm||text||否发主题权限用户组||**
 
-displayorder tinyint(1) 否   索引，推荐主题显示顺序
+replyperm||text||否回复权限用户组||**
 
-subject char(80) 否   推荐主题标题
+getattachperm||text||否附件下载权限用户组||**
 
-author char(15) 否   推荐主题作者用户名
+postattachperm||text||否附件上传权限用户组||**
 
-authorid mediumint(8) 否   推荐主题作者UID
+keywords||text||否版块关键词
 
-moderatorid mediumint(8) 否   推荐者UID
+supe_pushsetting||text||否SS主题推送设定||*
 
-expiration int(10) 否   推荐有效期
+modrecommend||text||否版主推荐功能参数||*
 
-   
+tradetypes||text||否商品分类设定||*
 
-cdb_forums论坛版块表   
+typemodels||mediumtext||否分类信息模型设定||*
 
-表说明：记录论坛版块信息。   
 
-字段 类型 Null 默认 注释
 
-fid smallint(6) 否   主键，论坛版块编号，自增
+cdb_forumlinks联盟论坛表
 
-fup smallint(6) 否 0 索引，上级版块编号
+表说明：记录联盟论坛信息。
 
-type enum('group', 'forum', 'sub') 否 forum 版块类型（group=分区 forum=版块 sub=子版块）
+字段||类型||Null||默认||注释
 
-name char(50) 否   版块名称
+id||smallint(6)||否主键，联盟论坛编号，自增
 
-status tinyint(1) 否 0 显示版块
+displayorder||tinyint(3)||否||0||显示顺序
 
-displayorder tinyint(3) 否 0 显示顺序
+name||varchar(100)||否联盟论坛名称
 
-styleid smallint(6) 否 0 风格方案
+url||varchar(100)||否联盟论坛||URL
 
-threads mediumint(8) 否 0 主题数
+description||mediumtext||否联盟论坛文字说明
 
-posts mediumint(8) 否 0 帖数
+logo||varchar(100)||否联盟论坛LOGO地址
 
-todayposts mediumint(8) 否 0 今日发表
 
-lastpost char(110) 否   最后发表
 
-allowsmilies tinyint(1) 否 0 允许使用表情
+cdb_forumrecommend版主推荐表
 
-allowhtml tinyint(1) 否 0 允许使用HTML代码
+表说明：记录版主推荐主题信息。
 
-allowbbcode tinyint(1) 否 0 允许使用Discuz! 代码
+字段||类型||Null||默认||注释
 
-allowimgcode tinyint(1) 否 0 允许使用[img]代码
+fid||smallint(6)||否主题所在版块FID
 
-allowmediacode tinyint(1) 否 0 允许使用[media]代码
+tid||mediumint(8)||否主键，推荐主题TID
 
-allowanonymous tinyint(1) 否 0 允许匿名发帖
+displayorder||tinyint(1)||否索引，推荐主题显示顺序
 
-allowshare tinyint(1) 否 0 允许其它模块共享
+subject||char(80)||否推荐主题标题
 
-allowpostspecial smallint(6) 否 0 允许发布的特殊主题
+author||char(15)||否推荐主题作者用户名
 
-allowspecialonly tinyint(1) 否 0 只允许发布特殊类型主题
+authorid||mediumint(8)||否推荐主题作者UID
 
-alloweditrules tinyint(1) 否 0 允许版主修改版块规则
+moderatorid||mediumint(8)||否推荐者UID
 
-recyclebin tinyint(1) 否 0 开启主题回收站
+expiration||int(10)||否推荐有效期
 
-modnewposts tinyint(1) 否 0 发帖审核
 
-jammer tinyint(1) 否 0 启用内容干扰码
 
-disablewatermark tinyint(1) 否 0 禁用图片附件添加水印
+cdb_forums论坛版块表
 
-inheritedmod tinyint(1) 否 0 版主权力继承到下级版块
+表说明：记录论坛版块信息。
 
-autoclose smallint(6) 否 0 自动关闭时间(天)
+字段||类型||Null||默认||注释
 
-forumcolumns tinyint(3) 否 0 下级版块横排列数
+fid||smallint(6)||否主键，论坛版块编号，自增
 
-threadcaches tinyint(1) 否 0 页面缓存系数
+fup||smallint(6)||否||0||索引，上级版块编号
 
-allowpaytoauthor tinyint(1) 否 1 显示“用支付宝求购”按钮
+type||enum('group',||'forum',||'sub')||否||forum||版块类型（group=分区||forum=版块||sub=子版块）
 
-alloweditpost tinyint(1) 否 1 允许编辑帖子
+name||char(50)||否版块名称
 
-simple tinyint(1) 否   只显示下级子版块
+status||tinyint(1)||否||0||显示版块
 
-   
+displayorder||tinyint(3)||否||0||显示顺序
 
-cdb_imagetypes图片分类表   
+styleid||smallint(6)||否||0||风格方案
 
-表说明：记录图片分类信息。现在只有表情分类功能，貌似会增加主题图标和用户头像的分类。   
+threads||mediumint(8)||否||0||主题数
 
-字段 类型 Null 默认 注释
+posts||mediumint(8)||否||0||帖数
 
-typeid smallint(6) 否   主键，图片分类编号，自增
+todayposts||mediumint(8)||否||0||今日发表
 
-name char(20) 否   图片分类名称
+lastpost||char(110)||否最后发表
 
-type enum('smiley', 'icon', 'avatar') 否 smiley 分类归属（smiley=表情）
+allowsmilies||tinyint(1)||否||0||允许使用表情
 
-displayorder tinyint(3) 否 0 显示顺序
+allowhtml||tinyint(1)||否||0||允许使用HTML代码
 
-directory char(100) 否   所在目录
+allowbbcode||tinyint(1)||否||0||允许使用Discuz!||代码
 
-   
+allowimgcode||tinyint(1)||否||0||允许使用[img]代码
 
-cdb_invites邀请注册数据表   
+allowmediacode||tinyint(1)||否||0||允许使用[media]代码
 
-表说明：记录邀请注册信息。   
+allowanonymous||tinyint(1)||否||0||允许匿名发帖
 
-字段 类型 Null 默认 注释
+allowshare||tinyint(1)||否||0||允许其它模块共享
 
-uid mediumint(8) 否 0 索引，邀请码购买者的UID
+allowpostspecial||smallint(6)||否||0||允许发布的特殊主题
 
-dateline int(10) 否 0 邀请码购买时间
+allowspecialonly||tinyint(1)||否||0||只允许发布特殊类型主题
 
-expiration int(10) 否 0 邀请码有效期
+alloweditrules||tinyint(1)||否||0||允许版主修改版块规则
 
-inviteip char(15) 否   邀请码购买者IP
+recyclebin||tinyint(1)||否||0||开启主题回收站
 
-invitecode char(16) 否   索引，邀请码
+modnewposts||tinyint(1)||否||0||发帖审核
 
-reguid mediumint(8) 否 0 受邀者UID
+jammer||tinyint(1)||否||0||启用内容干扰码
 
-regdateline int(10) 否 0 受邀者注册时间
+disablewatermark||tinyint(1)||否||0||禁用图片附件添加水印
 
-status tinyint(1) 否 1 邀请码状态（1=未使用 2=已用 3=已发送 4=过期）
+inheritedmod||tinyint(1)||否||0||版主权力继承到下级版块
 
-   
+autoclose||smallint(6)||否||0||自动关闭时间(天)
 
-cdb_itempool验证问答表   
+forumcolumns||tinyint(3)||否||0||下级版块横排列数
 
-表说明：记录验证问答信息。问答类型好像是预留的。   
+threadcaches||tinyint(1)||否||0||页面缓存系数
 
-字段 类型 Null 默认 注释
+allowpaytoauthor||tinyint(1)||否||1||显示“用支付宝求购”按钮
 
-id smallint(6) 否   主键，验证问答编号，自增
+alloweditpost||tinyint(1)||否||1||允许编辑帖子
 
-type tinyint(1) 否   验证问答类型
+simple||tinyint(1)||否只显示下级子版块
 
-question text 否   验证问题
 
-answer varchar(50) 否   验证答案
 
-   
+cdb_imagetypes图片分类表
 
-cdb_magiclog道具记录表   
+表说明：记录图片分类信息。现在只有表情分类功能，貌似会增加主题图标和用户头像的分类。
 
-表说明：记录道具购买使用等信息。   
+字段||类型||Null||默认||注释
 
-字段 类型 Null 默认 注释
+typeid||smallint(6)||否主键，图片分类编号，自增
 
-uid mediumint(8) 否 0 索引，道具所有者UID
+name||char(20)||否图片分类名称
 
-magicid smallint(6) 否 0 道具ID
+type||enum('smiley',||'icon',||'avatar')||否||smiley||分类归属（smiley=表情）
 
-action tinyint(1) 否 0 操作
+displayorder||tinyint(3)||否||0||显示顺序
 
-dateline int(10) 否 0 操作时间
+directory||char(100)||否所在目录
 
-amount smallint(6) 否 0 操作数量
 
-price mediumint(8) 否 0 价格
 
-targettid mediumint(8) 否 0 目标主题TID
+cdb_invites邀请注册数据表
 
-targetpid int(10) 否 0 目标帖子PID
+表说明：记录邀请注册信息。
 
-targetuid mediumint(8) 否 0 索引，目标用户UID
+字段||类型||Null||默认||注释
 
-   
+uid||mediumint(8)||否||0||索引，邀请码购买者的UID
 
-cdb_magicmarket道具市场数据表   
+dateline||int(10)||否||0||邀请码购买时间
 
-表说明：记录道具市场中待售道具信息。   
+expiration||int(10)||否||0||邀请码有效期
 
-字段 类型 Null 默认 注释
+inviteip||char(15)||否邀请码购买者IP
 
-mid smallint(6) 否   主键，道具出售编号，自增
+invitecode||char(16)||否索引，邀请码
 
-magicid smallint(6) 否 0 所售道具MAGICID
+reguid||mediumint(8)||否||0||受邀者UID
 
-uid mediumint(8) 否 0 索引，卖家UID
+regdateline||int(10)||否||0||受邀者注册时间
 
-username char(15) 否   卖家用户名
+status||tinyint(1)||否||1||邀请码状态（1=未使用||2=已用||3=已发送||4=过期）
 
-price mediumint(8) 否 0 索引，售价
 
-num smallint(6) 否 0 索引，出售数量
 
-   
+cdb_itempool验证问答表
 
-cdb_magics道具数据表   
+表说明：记录验证问答信息。问答类型好像是预留的。
 
-表说明：记录道具信息。Magicperm为serialize值   
+字段||类型||Null||默认||注释
 
-字段 类型 Null 默认 注释
+id||smallint(6)||否主键，验证问答编号，自增
 
-magicid smallint(6) 否   主键，道具编号，自增
+type||tinyint(1)||否验证问答类型
 
-available tinyint(1) 否 0 可用
+question||text||否验证问题
 
-type tinyint(3) 否 0 道具分类
+answer||varchar(50)||否验证答案
 
-name varchar(50) 否   道具名称
 
-identifier varchar(40) 否   道具标识
 
-description varchar(255) 否   道具描述
+cdb_magiclog道具记录表
 
-displayorder tinyint(3) 否 0 显示顺序
+表说明：记录道具购买使用等信息。
 
-price mediumint(8) 否 0 道具价格
+字段||类型||Null||默认||注释
 
-num smallint(6) 否 0 道具数量
+uid||mediumint(8)||否||0||索引，道具所有者UID
 
-salevolume smallint(6) 否 0 售出数量
+magicid||smallint(6)||否||0||道具ID
 
-supplytype tinyint(1) 否 0 自动补货方式
+action||tinyint(1)||否||0||操作
 
-supplynum smallint(6) 否 0 自动补货数量
+dateline||int(10)||否||0||操作时间
 
-weight tinyint(3) 否 1 道具重量
+amount||smallint(6)||否||0||操作数量
 
-filename varchar(50) 否   任务脚本
+price||mediumint(8)||否||0||价格
 
-magicperm text 否   道具权限
+targettid||mediumint(8)||否||0||目标主题TID
 
-   
+targetpid||int(10)||否||0||目标帖子PID
 
-cdb_medals勋章表   
+targetuid||mediumint(8)||否||0||索引，目标用户UID
 
-表说明：记录勋章信息。   
 
-字段 类型 Null 默认 注释
 
-medalid smallint(6) 否   主键，勋章编号，自增
+cdb_magicmarket道具市场数据表
 
-name varchar(50) 否   勋章名称
+表说明：记录道具市场中待售道具信息。
 
-available tinyint(1) 否 0 可用
+字段||类型||Null||默认||注释
 
-image varchar(30) 否   勋章图片
+mid||smallint(6)||否主键，道具出售编号，自增
 
-   
+magicid||smallint(6)||否||0||所售道具MAGICID
 
-cdb_memberfields会员扩展表   
+uid||mediumint(8)||否||0||索引，卖家UID
 
-表说明：记录会员扩展信息。Medals为\t分隔，groupterms为serialize值   
+username||char(15)||否卖家用户名
 
-字段 类型 Null 默认 注释
+price||mediumint(8)||否||0||索引，售价
 
-uid mediumint(8) 否 0 主键，会员UID
+num||smallint(6)||否||0||索引，出售数量
 
-nickname varchar(30) 否   会员昵称
 
-site varchar(75) 否   个人网站
 
-alipay varchar(50) 否   支付宝帐号
+cdb_magics道具数据表
 
-icq varchar(12) 否   ICQ
+表说明：记录道具信息。Magicperm为serialize值
 
-qq varchar(12) 否   QQ
+字段||类型||Null||默认||注释
 
-yahoo varchar(40) 否   YAHOO
+magicid||smallint(6)||否主键，道具编号，自增
 
-msn varchar(40) 否   MSN
+available||tinyint(1)||否||0||可用
 
-taobao varchar(40) 否   阿里旺旺
+type||tinyint(3)||否||0||道具分类
 
-location varchar(30) 否   来自
+name||varchar(50)||否道具名称
 
-customstatus varchar(30) 否   自定义头衔
+identifier||varchar(40)||否道具标识
 
-medals varchar(255) 否   获得的勋章
+description||varchar(255)||否道具描述
 
-avatar varchar(255) 否   头像
+displayorder||tinyint(3)||否||0||显示顺序
 
-avatarwidth tinyint(3) 否 0 头像宽
+price||mediumint(8)||否||0||道具价格
 
-avatarheight tinyint(3) 否 0 头像高
+num||smallint(6)||否||0||道具数量
 
-bio text 否   自我介绍
+salevolume||smallint(6)||否||0||售出数量
 
-sightml text 否   个性签名
+supplytype||tinyint(1)||否||0||自动补货方式
 
-ignorepm text 否   站内短消息忽略列表
+supplynum||smallint(6)||否||0||自动补货数量
 
-groupterms text 否   用户组有效期
+weight||tinyint(3)||否||1||道具重量
 
-authstr varchar(20) 否   用户激活码
+filename||varchar(50)||否任务脚本
 
-spacename varchar(40) 否   MiniSpace名称
+magicperm||text||否道具权限
 
-buyercredit smallint(6) 否 0 卖家信用积分
 
-sellercredit smallint(6) 否 0 买家信用积分
 
-   
+cdb_medals勋章表
 
-cdb_membermagics会员道具表   
+表说明：记录勋章信息。
 
-表说明：记录会员持有道具信息。   
+字段||类型||Null||默认||注释
 
-字段 类型 Null 默认 注释
+medalid||smallint(6)||否主键，勋章编号，自增
 
-uid mediumint(8) 否 0 索引，会员UID
+name||varchar(50)||否勋章名称
 
-magicid smallint(6) 否 0 道具MAGICID
+available||tinyint(1)||否||0||可用
 
-num smallint(6) 否 0 持有数量
+image||varchar(30)||否勋章图片
 
-   
 
-cdb_members会员表   
 
-表说明：记录会员信息。   
+cdb_memberfields会员扩展表
 
-字段 类型 Null 默认 注释
+表说明：记录会员扩展信息。Medals为\t分隔，groupterms为serialize值
 
-uid mediumint(8) 否   主键，会员编号，自增
+字段||类型||Null||默认||注释
 
-username char(15) 否   唯一，会员用户名
+uid||mediumint(8)||否||0||主键，会员UID
 
-password char(32) 否   会员密码
+nickname||varchar(30)||否会员昵称
 
-secques char(8) 否   用户安全问答
+site||varchar(75)||否个人网站
 
-gender tinyint(1) 否 0 性别（0=保密 1=男 2＝女）
+alipay||varchar(50)||否支付宝帐号
 
-adminid tinyint(1) 否 0 管理组GID
+icq||varchar(12)||否ICQ
 
-groupid smallint(6) 否 0 索引，用户组GID
+qq||varchar(12)||否QQ
 
-groupexpiry int(10) 否 0 用户组有效期
+yahoo||varchar(40)||否YAHOO
 
-extgroupids char(20) 否   扩展用户组
+msn||varchar(40)||否MSN
 
-regip char(15) 否   注册IP
+taobao||varchar(40)||否阿里旺旺
 
-regdate int(10) 否 0 注册时间
+location||varchar(30)||否来自
 
-lastip char(15) 否   最后访问IP
+customstatus||varchar(30)||否自定义头衔
 
-lastvisit int(10) 否 0 最后访问时间
+medals||varchar(255)||否获得的勋章
 
-lastactivity int(10) 否 0 最后活动时间
+avatar||varchar(255)||否头像
 
-lastpost int(10) 否 0 最后发表时间
+avatarwidth||tinyint(3)||否||0||头像宽
 
-posts mediumint(8) 否 0 发帖数
+avatarheight||tinyint(3)||否||0||头像高
 
-digestposts smallint(6) 否 0 精华数
+bio||text||否自我介绍
 
-oltime smallint(6) 否 0 在线时间
+sightml||text||否个性签名
 
-pageviews mediumint(8) 否 0 页面浏览量
+ignorepm||text||否站内短消息忽略列表
 
-credits int(10) 否 0 积分
+groupterms||text||否用户组有效期
 
-extcredits1 int(10) 否 0 扩展积分1
+authstr||varchar(20)||否用户激活码
 
-extcredits2 int(10) 否 0 扩展积分2
+spacename||varchar(40)||否MiniSpace名称
 
-extcredits3 int(10) 否 0 扩展积分3
+buyercredit||smallint(6)||否||0||卖家信用积分
 
-extcredits4 int(10) 否 0 扩展积分4
+sellercredit||smallint(6)||否||0||买家信用积分
 
-extcredits5 int(10) 否 0 扩展积分5
 
-extcredits6 int(10) 否 0 扩展积分6
 
-extcredits7 int(10) 否 0 扩展积分7
+cdb_membermagics会员道具表
 
-extcredits8 int(10) 否 0 扩展积分8
+表说明：记录会员持有道具信息。
 
-email char(40) 否   索引，EMAIL
+字段||类型||Null||默认||注释
 
-bday date 否 0000-00-00 生日
+uid||mediumint(8)||否||0||索引，会员UID
 
-sigstatus tinyint(1) 否 0 拥有签名
+magicid||smallint(6)||否||0||道具MAGICID
 
-tpp tinyint(3) 否 0 主题列表每页主题数
+num||smallint(6)||否||0||持有数量
 
-ppp tinyint(3) 否 0 主题页面每页帖数
 
-styleid smallint(6) 否 0 界面风格
 
-dateformat tinyint(1) 否 0 日期格式
+cdb_members会员表
 
-timeformat tinyint(1) 否 0 时间格式
+表说明：记录会员信息。
 
-pmsound tinyint(1) 否 0 短消息提示音
+字段||类型||Null||默认||注释
 
-showemail tinyint(1) 否 0 EMAIL地址可见
+uid||mediumint(8)||否主键，会员编号，自增
 
-newsletter tinyint(1) 否 0 同意接收论坛通知 (Email 或短消息)
+username||char(15)||否唯一，会员用户名
 
-invisible tinyint(1) 否 0 在线列表中隐身
+password||char(32)||否会员密码
 
-timeoffset char(4) 否   时差设定
+secques||char(8)||否用户安全问答
 
-newpm tinyint(1) 否 0 有新短消息
+gender||tinyint(1)||否||0||性别（0=保密||1=男||2＝女）
 
-accessmasks tinyint(1) 否 0 权限屏蔽（见ACCESS表）
+adminid||tinyint(1)||否||0||管理组GID
 
-editormode tinyint(1) 否 2 编辑器模式
+groupid||smallint(6)||否||0||索引，用户组GID
 
-customshow tinyint(1) 否 26 签名、头像、图片显示设置
+groupexpiry||int(10)||否||0||用户组有效期
 
-xspacestatus tinyint(1) 否 0 XSPACE状态（SS相关）
+extgroupids||char(20)||否扩展用户组
 
+regip||char(15)||否注册IP
 
+regdate||int(10)||否||0||注册时间
 
+lastip||char(15)||否最后访问IP
 
+lastvisit||int(10)||否||0||最后访问时间
 
-discuz!数据字典(二)2009-12-16 11:26cdb_memberspaces个人空间数据表   
+lastactivity||int(10)||否||0||最后活动时间
 
-表说明：记录MiniSpace设置信息。   
+lastpost||int(10)||否||0||最后发表时间
 
-字段 类型 Null 默认 注释
+posts||mediumint(8)||否||0||发帖数
 
-uid mediumint(8) 否 0 主键，会员UID
+digestposts||smallint(6)||否||0||精华数
 
-style char(20) 否 空间风格
+oltime||smallint(6)||否||0||在线时间
 
-description char(100) 否 空间描述
+pageviews||mediumint(8)||否||0||页面浏览量
 
-layout char(200) 否 布局层设置
+credits||int(10)||否||0||积分
 
-side tinyint(1) 否 0 布局侧边设置（0=双侧边 1=左侧边 2＝右侧边）
+extcredits1||int(10)||否||0||扩展积分1
 
-   
+extcredits2||int(10)||否||0||扩展积分2
 
-cdb_moderators版主表   
+extcredits3||int(10)||否||0||扩展积分3
 
-表说明：记录版主信息。   
+extcredits4||int(10)||否||0||扩展积分4
 
-字段 类型 Null 默认 注释
+extcredits5||int(10)||否||0||扩展积分5
 
-uid mediumint(8) 否 0 关联主键，版主UID
+extcredits6||int(10)||否||0||扩展积分6
 
-fid smallint(6) 否 0 关联主键，版块FID
+extcredits7||int(10)||否||0||扩展积分7
 
-displayorder tinyint(3) 否 0 显示顺序
+extcredits8||int(10)||否||0||扩展积分8
 
-inherited tinyint(1) 否 0 继承自父版块
+email||char(40)||否索引，EMAIL
 
-   
+bday||date||否||0000-00-00||生日
 
-cdb_modworks管理统计表   
+sigstatus||tinyint(1)||否||0||拥有签名
 
-表说明：记录版主管理操作统计信息。   
+tpp||tinyint(3)||否||0||主题列表每页主题数
 
-字段 类型 Null 默认 注释
+ppp||tinyint(3)||否||0||主题页面每页帖数
 
-uid mediumint(8) 否 0 索引，版主UID
+styleid||smallint(6)||否||0||界面风格
 
-modaction char(3) 否 管理操作标识
+dateformat||tinyint(1)||否||0||日期格式
 
-dateline date 否 2006-1-1 管理操作日期
+timeformat||tinyint(1)||否||0||时间格式
 
-count smallint(6) 否 0 管理操作计数
+pmsound||tinyint(1)||否||0||短消息提示音
 
-posts smallint(6) 否 0 管理操作帖数
+showemail||tinyint(1)||否||0||EMAIL地址可见
 
-   
+newsletter||tinyint(1)||否||0||同意接收论坛通知||(Email||或短消息)
 
-cdb_myposts我的回复表   
+invisible||tinyint(1)||否||0||在线列表中隐身
 
-表说明：记录我的回复信息。   
+timeoffset||char(4)||否时差设定
 
-字段 类型 Null 默认 注释
+newpm||tinyint(1)||否||0||有新短消息
 
-uid mediumint(8) 否 0 关联主键，会员UID
+accessmasks||tinyint(1)||否||0||权限屏蔽（见ACCESS表）
 
-tid mediumint(8) 否 0 关联主键，索引，主题TID
+editormode||tinyint(1)||否||2||编辑器模式
 
-pid int(10) 否 0 帖子PID
+customshow||tinyint(1)||否||26||签名、头像、图片显示设置
 
-position smallint(6) 否 0 最后回复位置
+xspacestatus||tinyint(1)||否||0||XSPACE状态（SS相关）
 
-dateline int(10) 否 0 最后回复时间
 
-special tinyint(1) 否 0 特殊主题类型
 
-   
 
-cdb_mythreads我的主题表   
 
-表说明：记录我的主题信息。   
+discuz!数据字典(二)2009-12-16||11:26cdb_memberspaces个人空间数据表
 
-字段 类型 Null 默认 注释
+表说明：记录MiniSpace设置信息。
 
-uid mediumint(8) 否 0 关联主键，会员UID
+字段||类型||Null||默认||注释
 
-tid mediumint(8) 否 0 关联主键，索引，主题TID
+uid||mediumint(8)||否||0||主键，会员UID
 
-special tinyint(1) 否 0 特殊主题类型
+style||char(20)||否||空间风格
 
-dateline int(10) 否 0 主题发表时间
+description||char(100)||否||空间描述
 
-   
+layout||char(200)||否||布局层设置
 
-cdb_onlinelist在线列表定制表   
+side||tinyint(1)||否||0||布局侧边设置（0=双侧边||1=左侧边||2＝右侧边）
 
-表说明：记录用户在线列表定制信息。   
 
-字段 类型 Null 默认 注释
 
-groupid smallint(6) 否 0 用户组GID
+cdb_moderators版主表
 
-displayorder tinyint(3) 否 0 显示顺序
+表说明：记录版主信息。
 
-title varchar(30) 否 用户组头衔
+字段||类型||Null||默认||注释
 
-url varchar(30) 否 用户组图例
+uid||mediumint(8)||否||0||关联主键，版主UID
 
-   
+fid||smallint(6)||否||0||关联主键，版块FID
 
-cdb_onlinetime在线时间表   
+displayorder||tinyint(3)||否||0||显示顺序
 
-表说明：记录用户在线时间统计信息。   
+inherited||tinyint(1)||否||0||继承自父版块
 
-字段 类型 Null 默认 注释
 
-uid mediumint(8) 否 0 主键，会员UID
 
-thismonth smallint(6) 否 0 本月在线时间
+cdb_modworks管理统计表
 
-total mediumint(8) 否 0 总在线时间
+表说明：记录版主管理操作统计信息。
 
-lastupdate int(10) 否 0 最后更新时间
+字段||类型||Null||默认||注释
 
-   
+uid||mediumint(8)||否||0||索引，版主UID
 
-cdb_orders订单表   
+modaction||char(3)||否||管理操作标识
 
-表说明：记录积分充值订单信息。   
+dateline||date||否||2006-1-1||管理操作日期
 
-字段 类型 Null 默认 注释
+count||smallint(6)||否||0||管理操作计数
 
-orderid char(32) 否 唯一，订单编号
+posts||smallint(6)||否||0||管理操作帖数
 
-status char(3) 否 订单状态（1=未付款 2=已支付 3=人工补单）
 
-buyer char(50) 否 付款支付宝帐号
 
-admin char(15) 否 补单管理员用户名
+cdb_myposts我的回复表
 
-uid mediumint(8) 否 0 索引，付款用户UID
+表说明：记录我的回复信息。
 
-amount int(10) 否 0 订购量
+字段||类型||Null||默认||注释
 
-price float(7,2) 否 0 消费金额
+uid||mediumint(8)||否||0||关联主键，会员UID
 
-submitdate int(10) 否 0 索引，提交时间
+tid||mediumint(8)||否||0||关联主键，索引，主题TID
 
-confirmdate int(10) 否 0 补单确认时间
+pid||int(10)||否||0||帖子PID
 
-   
+position||smallint(6)||否||0||最后回复位置
 
-cdb_paymentlog主题购买记录表   
+dateline||int(10)||否||0||最后回复时间
 
-表说明：记录主题购买信息。   
+special||tinyint(1)||否||0||特殊主题类型
 
-字段 类型 Null 默认 注释
 
-uid mediumint(8) 否 0 关联主键，索引，购买者UID
 
-tid mediumint(8) 否 0 关联主键，所购主题TID
+cdb_mythreads我的主题表
 
-authorid mediumint(8) 否 0 主题作者UID
+表说明：记录我的主题信息。
 
-dateline int(10) 否 0 购买时间
+字段||类型||Null||默认||注释
 
-amount int(10) 否 0 付费总金额
+uid||mediumint(8)||否||0||关联主键，会员UID
 
-netamount int(10) 否 0 税后金额
+tid||mediumint(8)||否||0||关联主键，索引，主题TID
 
-   
+special||tinyint(1)||否||0||特殊主题类型
 
-cdb_pluginhooks插件钩子表   
+dateline||int(10)||否||0||主题发表时间
 
-表说明：记录插件钩子信息。   
 
-字段 类型 Null 默认 注释
 
-pluginhookid mediumint(8) 否 主键，插件钩子编号，自增
+cdb_onlinelist在线列表定制表
 
-pluginid smallint(6) 否 0 索引，所属插件pluginid
+表说明：记录用户在线列表定制信息。
 
-available tinyint(1) 否 0 索引，可用
+字段||类型||Null||默认||注释
 
-title varchar(255) 否 钩子名称
+groupid||smallint(6)||否||0||用户组GID
 
-description mediumtext 否 钩子描述
+displayorder||tinyint(3)||否||0||显示顺序
 
-code mediumtext 否 PHP代码
+title||varchar(30)||否||用户组头衔
 
-   
+url||varchar(30)||否||用户组图例
 
-cdb_plugins插件表   
 
-表说明：记录插件信息。Modules为serialize值。   
 
-字段 类型 Null 默认 注释
+cdb_onlinetime在线时间表
 
-pluginid smallint(6) 否 主键，插件编号，自增
+表说明：记录用户在线时间统计信息。
 
-available tinyint(1) 否 0 可用
+字段||类型||Null||默认||注释
 
-adminid tinyint(1) 否 0 后台权限等级
+uid||mediumint(8)||否||0||主键，会员UID
 
-name varchar(40) 否 插件名称
+thismonth||smallint(6)||否||0||本月在线时间
 
-identifier varchar(40) 否 唯一，唯一标识符
+total||mediumint(8)||否||0||总在线时间
 
-description varchar(255) 否 插件描述
+lastupdate||int(10)||否||0||最后更新时间
 
-datatables varchar(255) 否 插件数据表
 
-directory varchar(100) 否 插件目录
 
-copyright varchar(100) 否 版权信息
+cdb_orders订单表
 
-modules text 否 插件模块和自定义菜单信息
+表说明：记录积分充值订单信息。
 
-   
+字段||类型||Null||默认||注释
 
-cdb_pluginvars插件变量表   
+orderid||char(32)||否||唯一，订单编号
 
-表说明：记录插件变量信息。   
+status||char(3)||否||订单状态（1=未付款||2=已支付||3=人工补单）
 
-字段 类型 Null 默认 注释
+buyer||char(50)||否||付款支付宝帐号
 
-pluginvarid mediumint(8) 否 主键，插件变量编号，自增
+admin||char(15)||否||补单管理员用户名
 
-pluginid smallint(6) 否 0 索引，所属插件pluginid
+uid||mediumint(8)||否||0||索引，付款用户UID
 
-displayorder tinyint(3) 否 0 显示顺序
+amount||int(10)||否||0||订购量
 
-title varchar(100) 否 配置名称
+price||float(7,2)||否||0||消费金额
 
-description varchar(255) 否 配置说明
+submitdate||int(10)||否||0||索引，提交时间
 
-variable varchar(40) 否 配置变量名
+confirmdate||int(10)||否||0||补单确认时间
 
-type varchar(20) 否 text 配置类型
 
-value text 否 变量值
 
-extra text 否 扩充设置
+cdb_paymentlog主题购买记录表
 
-   
+表说明：记录主题购买信息。
 
-cdb_pms站内短信息表   
+字段||类型||Null||默认||注释
 
-表说明：记录站内短消息信息。   
+uid||mediumint(8)||否||0||关联主键，索引，购买者UID
 
-字段 类型 Null 默认 注释
+tid||mediumint(8)||否||0||关联主键，所购主题TID
 
-pmid int(10) 否 主键，短消息编号，自增
+authorid||mediumint(8)||否||0||主题作者UID
 
-msgfrom varchar(15) 否 发送者用户名
+dateline||int(10)||否||0||购买时间
 
-msgfromid mediumint(8) 否 0 索引，发送者UID
+amount||int(10)||否||0||付费总金额
 
-msgtoid mediumint(8) 否 0 索引，接收者UID
+netamount||int(10)||否||0||税后金额
 
-folder enum('inbox', 'outbox') 否 inbox 短消息所在文件夹（inbox=收件箱 outbox=草稿箱）
 
-new tinyint(1) 否 0 新短消息（0=已读 1=未读 2=不再显示）
 
-subject varchar(75) 否 短消息标题
+cdb_pluginhooks插件钩子表
 
-dateline int(10) 否 0 发送时间
+表说明：记录插件钩子信息。
 
-message text 否 短消息内容
+字段||类型||Null||默认||注释
 
-delstatus tinyint(1) 否 0 删除状态（0=无 1=发送者 2=接收者）
+pluginhookid||mediumint(8)||否||主键，插件钩子编号，自增
 
-   
+pluginid||smallint(6)||否||0||索引，所属插件pluginid
 
-cdb_pmsearchindex站内短信息搜索缓存表   
+available||tinyint(1)||否||0||索引，可用
 
-表说明：记录站内短消息搜索缓存信息。keywords为关键字+收发信人，搜索searchstring为一定规则下的搜索条件字符串。   
+title||varchar(255)||否||钩子名称
 
-字段 类型 Null 默认 注释
+description||mediumtext||否||钩子描述
 
-searchid int(10) 否 主键，搜索缓存编号，自增
+code||mediumtext||否||PHP代码
 
-keywords varchar(255) 否 搜索关键字
 
-searchstring varchar(255) 否 搜索字符串
 
-uid mediumint(8) 否 0 搜索者UID
+cdb_plugins插件表
 
-dateline int(10) 否 0 搜索时间
+表说明：记录插件信息。Modules为serialize值。
 
-expiration int(10) 否 0 缓存有效期
+字段||类型||Null||默认||注释
 
-pms smallint(6) 否 0 结果数据条数
+pluginid||smallint(6)||否||主键，插件编号，自增
 
-pmids text 否 结果短消息PMID组（,分隔）
+available||tinyint(1)||否||0||可用
 
-   
+adminid||tinyint(1)||否||0||后台权限等级
 
-cdb_polloptions投票选项表   
+name||varchar(40)||否||插件名称
 
-表说明：记录投票选项信息。   
+identifier||varchar(40)||否||唯一，唯一标识符
 
-字段 类型 Null 默认 注释
+description||varchar(255)||否||插件描述
 
-polloptionid int(10) 否 主键，投票选项编号，自增
+datatables||varchar(255)||否||插件数据表
 
-tid mediumint(8) 否 0 索引，投票主题TID
+directory||varchar(100)||否||插件目录
 
-votes mediumint(8) 否 0 选项得票数
+copyright||varchar(100)||否||版权信息
 
-displayorder tinyint(3) 否 0 选项显示顺序
+modules||text||否||插件模块和自定义菜单信息
 
-polloption varchar(80) 否 选项内容
 
-voterids mediumtext 否 投票者UID组（\t分隔）
 
-   
+cdb_pluginvars插件变量表
 
-cdb_polls投票表   
+表说明：记录插件变量信息。
 
-表说明：记录投票信息。   
+字段||类型||Null||默认||注释
 
-字段 类型 Null 默认 注释
+pluginvarid||mediumint(8)||否||主键，插件变量编号，自增
 
-tid mediumint(8) 否 0 主键，投票主题TID
+pluginid||smallint(6)||否||0||索引，所属插件pluginid
 
-multiple tinyint(1) 否 0 多选
+displayorder||tinyint(3)||否||0||显示顺序
 
-visible tinyint(1) 否 0 提交投票后结果才可见
+title||varchar(100)||否||配置名称
 
-maxchoices tinyint(3) 否 0 最多可选项数
+description||varchar(255)||否||配置说明
 
-expiration int(10) 否 0 投票有效期
+variable||varchar(40)||否||配置变量名
 
-   
+type||varchar(20)||否||text||配置类型
 
-cdb_posts帖子表   
+value||text||否||变量值
 
-表说明：记录帖子信息。   
+extra||text||否||扩充设置
 
-字段 类型 Null 默认 注释
 
-pid int(10) 否 主键，帖子编号，自增
 
-fid smallint(6) 否 0 索引，帖子所在版块FID
+cdb_pms站内短信息表
 
-tid mediumint(8) 否 0 帖子所属主题TID
+表说明：记录站内短消息信息。
 
-first tinyint(1) 否 0 索引，主题贴
+字段||类型||Null||默认||注释
 
-author varchar(15) 否 帖子作者用户名
+pmid||int(10)||否||主键，短消息编号，自增
 
-authorid mediumint(8) 否 0 索引，帖子作者UID
+msgfrom||varchar(15)||否||发送者用户名
 
-subject varchar(80) 否 帖子标题
+msgfromid||mediumint(8)||否||0||索引，发送者UID
 
-dateline int(10) 否 0 发布时间
+msgtoid||mediumint(8)||否||0||索引，接收者UID
 
-message mediumtext 否 帖子内容
+folder||enum('inbox',||'outbox')||否||inbox||短消息所在文件夹（inbox=收件箱||outbox=草稿箱）
 
-useip varchar(15) 否 作者IP
+new||tinyint(1)||否||0||新短消息（0=已读||1=未读||2=不再显示）
 
-invisible tinyint(1) 否 0 索引，不可见
+subject||varchar(75)||否||短消息标题
 
-anonymous tinyint(1) 否 0 匿名发帖
+dateline||int(10)||否||0||发送时间
 
-usesig tinyint(1) 否 0 使用个人签名
+message||text||否||短消息内容
 
-htmlon tinyint(1) 否 0 使用HTML
+delstatus||tinyint(1)||否||0||删除状态（0=无||1=发送者||2=接收者）
 
-bbcodeoff tinyint(1) 否 0 禁用 Discuz!代码
 
-smileyoff tinyint(1) 否 0 禁用 Smilies
 
-parseurloff tinyint(1) 否 0 禁用 URL 识别
+cdb_pmsearchindex站内短信息搜索缓存表
 
-attachment tinyint(1) 否 0 包含附件
+表说明：记录站内短消息搜索缓存信息。keywords为关键字+收发信人，搜索searchstring为一定规则下的搜索条件字符串。
 
-rate smallint(6) 否 0 评分总计
+字段||类型||Null||默认||注释
 
-ratetimes tinyint(3) 否 0 评分次数
+searchid||int(10)||否||主键，搜索缓存编号，自增
 
-status tinyint(1) 否 0 帖子状态（0=正常 1=屏蔽）
+keywords||varchar(255)||否||搜索关键字
 
-   
+searchstring||varchar(255)||否||搜索字符串
 
-cdb_profilefields用户栏目定制表   
+uid||mediumint(8)||否||0||搜索者UID
 
-表说明：记录用户栏目定制信息。每个用户栏目在memberfields表中会建立一个对应字段用以保存数据，字段名称为field_{fieldid}。   
+dateline||int(10)||否||0||搜索时间
 
-字段 类型 Null 默认 注释
+expiration||int(10)||否||0||缓存有效期
 
-fieldid smallint(6) 否 主键，栏目编号，自增
+pms||smallint(6)||否||0||结果数据条数
 
-available tinyint(1) 否 0 索引，可用
+pmids||text||否||结果短消息PMID组（,分隔）
 
-invisible tinyint(1) 否 0 隐藏
 
-title varchar(50) 否 栏目标题
 
-description varchar(255) 否 简短描述
+cdb_polloptions投票选项表
 
-size tinyint(3) 否 0 内容最大长度
+表说明：记录投票选项信息。
 
-displayorder smallint(6) 否 0 显示顺序
+字段||类型||Null||默认||注释
 
-required tinyint(1) 否 0 必填内容
+polloptionid||int(10)||否||主键，投票选项编号，自增
 
-unchangeable tinyint(1) 否 0 不可修改
+tid||mediumint(8)||否||0||索引，投票主题TID
 
-showinthread tinyint(1) 否 0 在帖子中显示
+votes||mediumint(8)||否||0||选项得票数
 
-selective tinyint(1) 否 0 是否可选
+displayorder||tinyint(3)||否||0||选项显示顺序
 
-choices text 否 选项内容
+polloption||varchar(80)||否||选项内容
 
-   
+voterids||mediumtext||否||投票者UID组（\t分隔）
 
-cdb_projects论坛方案表   
 
-表说明：记录论坛方案信息。value为serialize值。   
 
-字段 类型 Null 默认 注释
+cdb_polls投票表
 
-id smallint(6) 否 主键，方案编号，自增
+表说明：记录投票信息。
 
-name varchar(50) 否 方案名称
+字段||类型||Null||默认||注释
 
-type varchar(10) 否 方案类型
+tid||mediumint(8)||否||0||主键，投票主题TID
 
-description varchar(255) 否 方案描述
+multiple||tinyint(1)||否||0||多选
 
-value mediumtext 否 方案内容
+visible||tinyint(1)||否||0||提交投票后结果才可见
 
-   
+maxchoices||tinyint(3)||否||0||最多可选项数
 
-cdb_promotions论坛推广表   
+expiration||int(10)||否||0||投票有效期
 
-表说明：记录论坛访问推广信息。   
 
-字段 类型 Null 默认 注释
 
-ip char(15) 否 主键，来访者IP
+cdb_posts帖子表
 
-uid mediumint(8) 否 0 推广者UID
+表说明：记录帖子信息。
 
-username char(15) 否 推广者用户名
+字段||类型||Null||默认||注释
 
-   
+pid||int(10)||否||主键，帖子编号，自增
 
-cdb_ranks发帖数级别表   
+fid||smallint(6)||否||0||索引，帖子所在版块FID
 
-表说明：记录发贴数级别信息。   
+tid||mediumint(8)||否||0||帖子所属主题TID
 
-字段 类型 Null 默认 注释
+first||tinyint(1)||否||0||索引，主题贴
 
-rankid smallint(6) 否 主键，发帖级别编号，自增
+author||varchar(15)||否||帖子作者用户名
 
-ranktitle varchar(30) 否 级别头衔
+authorid||mediumint(8)||否||0||索引，帖子作者UID
 
-postshigher mediumint(8) 否 0 发贴数高于
+subject||varchar(80)||否||帖子标题
 
-stars tinyint(3) 否 0 星星数
+dateline||int(10)||否||0||发布时间
 
-color varchar(7) 否 头衔颜色
+message||mediumtext||否||帖子内容
 
-   
+useip||varchar(15)||否||作者IP
 
-cdb_ratelog帖子评分记录表   
+invisible||tinyint(1)||否||0||索引，不可见
 
-表说明：记录帖子评分信息。   
+anonymous||tinyint(1)||否||0||匿名发帖
 
-字段 类型 Null 默认 注释
+usesig||tinyint(1)||否||0||使用个人签名
 
-pid int(10) 否 0 索引，被评分帖子PID
+htmlon||tinyint(1)||否||0||使用HTML
 
-uid mediumint(8) 否 0 评分者UID
+bbcodeoff||tinyint(1)||否||0||禁用||Discuz!代码
 
-username char(15) 否 评分者用户名
+smileyoff||tinyint(1)||否||0||禁用||Smilies
 
-extcredits tinyint(1) 否 0 评分扩展积分类别
+parseurloff||tinyint(1)||否||0||禁用||URL||识别
 
-dateline int(10) 否 0 索引，评分时间
+attachment||tinyint(1)||否||0||包含附件
 
-score smallint(6) 否 0 评分数
+rate||smallint(6)||否||0||评分总计
 
-reason char(40) 否 操作原因
+ratetimes||tinyint(3)||否||0||评分次数
 
-   
+status||tinyint(1)||否||0||帖子状态（0=正常||1=屏蔽）
 
-cdb_regips限制注册IP表   
 
-表说明：开启IP注册间隔限制等功能时，记录注册IP信息。   
 
-字段 类型 Null 默认 注释
+cdb_profilefields用户栏目定制表
 
-ip char(15) 否 索引，注册IP
+表说明：记录用户栏目定制信息。每个用户栏目在memberfields表中会建立一个对应字段用以保存数据，字段名称为field_{fieldid}。
 
-dateline int(10) 否 0 注册时间
+字段||类型||Null||默认||注释
 
-count smallint(6) 否 0 操作次数
+fieldid||smallint(6)||否||主键，栏目编号，自增
 
-   
+available||tinyint(1)||否||0||索引，可用
 
-cdb_relatedthreads相关主题表   
+invisible||tinyint(1)||否||0||隐藏
 
-表说明：记录相关主题信息。relatedthreads为serialize值。   
+title||varchar(50)||否||栏目标题
 
-字段 类型 Null 默认 注释
+description||varchar(255)||否||简短描述
 
-tid mediumint(8) 否 0 关联主键，主题TID
+size||tinyint(3)||否||0||内容最大长度
 
-type enum('general', 'trade') 否 general 关联主键，相关类型（general=站内 trade=站外）
+displayorder||smallint(6)||否||0||显示顺序
 
-expiration int(10) 否 0 有效期
+required||tinyint(1)||否||0||必填内容
 
-keywords varchar(255) 否 关键字（\t分隔）
+unchangeable||tinyint(1)||否||0||不可修改
 
-relatedthreads text 否 相关主题信息
+showinthread||tinyint(1)||否||0||在帖子中显示
 
-   
+selective||tinyint(1)||否||0||是否可选
 
-cdb_rewardlog悬赏记录表   
+choices||text||否||选项内容
 
-表说明：记录悬赏信息。   
 
-字段 类型 Null 默认 注释
 
-tid mediumint(8) 否 0 悬赏主题TID
+cdb_projects论坛方案表
 
-authorid mediumint(8) 否 0 悬赏发起者UID
+表说明：记录论坛方案信息。value为serialize值。
 
-answererid mediumint(8) 否 0 回答者UID
+字段||类型||Null||默认||注释
 
-dateline int(10) 是 0 回答时间
+id||smallint(6)||否||主键，方案编号，自增
 
-netamount int(10) 否 0 悬赏价格
+name||varchar(50)||否||方案名称
 
-   
+type||varchar(10)||否||方案类型
 
-cdb_rsscaches RSS缓存表   
+description||varchar(255)||否||方案描述
 
-表说明：记录RSS订阅主题缓存信息。   
+value||mediumtext||否||方案内容
 
-字段 类型 Null 默认 注释
 
-lastupdate int(10) 否 0 最后更新时间
 
-fid smallint(6) 否 0 索引，RSS订阅版块FID
+cdb_promotions论坛推广表
 
-tid mediumint(8) 否 0 RSS订阅主题TID
+表说明：记录论坛访问推广信息。
 
-dateline int(10) 否 0 RSS订阅时间
+字段||类型||Null||默认||注释
 
-forum char(50) 否 RSS订阅版块名称
+ip||char(15)||否||主键，来访者IP
 
-author char(15) 否 RSS订阅主题作者用户名
+uid||mediumint(8)||否||0||推广者UID
 
-subject char(80) 否 RSS订阅主题标题
+username||char(15)||否||推广者用户名
 
-description char(255) 否 RSS订阅主题摘要
 
-   
 
-cdb_searchindex搜索缓存表   
+cdb_ranks发帖数级别表
 
-表说明：记录搜索主题缓存信息。keywords为关键字+作者，搜索searchstring为一定规则下的搜索条件字符串。   
+表说明：记录发贴数级别信息。
 
-字段 类型 Null 默认 注释
+字段||类型||Null||默认||注释
 
-searchid int(10) 否 主键，搜索缓存编号，自增
+rankid||smallint(6)||否||主键，发帖级别编号，自增
 
-keywords varchar(255) 否 搜索关键字
+ranktitle||varchar(30)||否||级别头衔
 
-searchstring text 否 搜索字符串
+postshigher||mediumint(8)||否||0||发贴数高于
 
-useip varchar(15) 否 搜索者IP
+stars||tinyint(3)||否||0||星星数
 
-uid mediumint(10) 否 0 搜索者UID
+color||varchar(7)||否||头衔颜色
 
-dateline int(10) 否 0 搜索时间
 
-expiration int(10) 否 0 有效期
 
-threadtypeid smallint(6) 否 0 搜索主题分类ID
+cdb_ratelog帖子评分记录表
 
-threads smallint(6) 否 0 搜索结果主题数
+表说明：记录帖子评分信息。
 
-tids text 否 搜索结果主题TID组
+字段||类型||Null||默认||注释
 
-   
+pid||int(10)||否||0||索引，被评分帖子PID
 
-cdb_sessions会话表   
+uid||mediumint(8)||否||0||评分者UID
 
-表说明：记录论坛访问会话信息。   
+username||char(15)||否||评分者用户名
 
-字段 类型 Null 默认 注释
+extcredits||tinyint(1)||否||0||评分扩展积分类别
 
-sid char(6) 否 唯一，会话编号
+dateline||int(10)||否||0||索引，评分时间
 
-ip1 tinyint(3) 否 0 ip字段1
+score||smallint(6)||否||0||评分数
 
-ip2 tinyint(3) 否 0 ip字段2
+reason||char(40)||否||操作原因
 
-ip3 tinyint(3) 否 0 ip字段3
 
-ip4 tinyint(3) 否 0 ip字段4
 
-uid mediumint(8) 否 0 索引，会话用户UID
+cdb_regips限制注册IP表
 
-username char(15) 否 会话用户名
+表说明：开启IP注册间隔限制等功能时，记录注册IP信息。
 
-groupid smallint(6) 否 0 会话用户组GROUPID
+字段||类型||Null||默认||注释
 
-styleid smallint(6) 否 0 会话用户风格STYLEID
+ip||char(15)||否||索引，注册IP
 
-invisible tinyint(1) 否 0 隐身登录
+dateline||int(10)||否||0||注册时间
 
-action tinyint(1) 否 0 会话用户动作
+count||smallint(6)||否||0||操作次数
 
-lastactivity int(10) 否 0 最后活动时间
 
-lastolupdate int(10) 否 0 在线时间最后更新
 
-pageviews smallint(6) 否 0 页面访问量
+cdb_relatedthreads相关主题表
 
-seccode mediumint(6) 否 0 验证码
+表说明：记录相关主题信息。relatedthreads为serialize值。
 
-fid smallint(6) 否 0 活动版块FID
+字段||类型||Null||默认||注释
 
-tid mediumint(8) 否 0 阅读主题TID
+tid||mediumint(8)||否||0||关联主键，主题TID
 
-bloguid mediumint(8) 否 0 不详
+type||enum('general',||'trade')||否||general||关联主键，相关类型（general=站内||trade=站外）
 
-   
+expiration||int(10)||否||0||有效期
 
-cdb_settings论坛设置表   
+keywords||varchar(255)||否||关键字（\t分隔）
 
-表说明：记录论坛设置信息。   
+relatedthreads||text||否||相关主题信息
 
-字段 类型 Null 默认 注释
 
-variable varchar(32) 否 主键，论坛设置变量名
 
-value text 否 论坛设置变量值
+cdb_rewardlog悬赏记录表
 
-   
+表说明：记录悬赏信息。
 
-cdb_smilies表情表   
+字段||类型||Null||默认||注释
 
-表说明：记录表情信息。   
+tid||mediumint(8)||否||0||悬赏主题TID
 
-字段 类型 Null 默认 注释
+authorid||mediumint(8)||否||0||悬赏发起者UID
 
-id smallint(6) 否 主键，表情编号，自增
+answererid||mediumint(8)||否||0||回答者UID
 
-typeid smallint(6) 否 表情分类typeid
+dateline||int(10)||是||0||回答时间
 
-displayorder tinyint(3) 否 0 显示顺序
+netamount||int(10)||否||0||悬赏价格
 
-type enum('smiley', 'icon') 否 smiley 表情类型（smiley=表情 icon=主题图标）
 
-code varchar(30) 否 表情代码
 
-url varchar(30) 否 表情文件名
+cdb_rsscaches||RSS缓存表
 
-   
+表说明：记录RSS订阅主题缓存信息。
 
-cdb_spacecaches minispace缓存表   
+字段||类型||Null||默认||注释
 
-表说明：记录minispace缓存信息。value为serialize值。   
+lastupdate||int(10)||否||0||最后更新时间
 
-字段 类型 Null 默认 注释
+fid||smallint(6)||否||0||索引，RSS订阅版块FID
 
-uid mediumint(8) 否 0 关联主键，空间用户UID
+tid||mediumint(8)||否||0||RSS订阅主题TID
 
-variable varchar(20) 否 关联主键，空间缓存变量名
+dateline||int(10)||否||0||RSS订阅时间
 
-value text 否 空间缓存变量值
+forum||char(50)||否||RSS订阅版块名称
 
-expiration int(10) 否 0 有效期
+author||char(15)||否||RSS订阅主题作者用户名
 
-   
+subject||char(80)||否||RSS订阅主题标题
 
-cdb_stats统计表   
+description||char(255)||否||RSS订阅主题摘要
 
-表说明：记录论坛基本统计信息。   
 
-字段 类型 Null 默认 注释
 
-type char(10) 否 关联主键，统计类别
+cdb_searchindex搜索缓存表
 
-variable char(10) 否 关联主键，统计变量名
+表说明：记录搜索主题缓存信息。keywords为关键字+作者，搜索searchstring为一定规则下的搜索条件字符串。
 
-count int(10) 否 0 统计计数
+字段||类型||Null||默认||注释
 
-   
+searchid||int(10)||否||主键，搜索缓存编号，自增
 
-cdb_statvars统计变量表   
+keywords||varchar(255)||否||搜索关键字
 
-表说明：记录论坛统计信息。Value根据统计类别不同可能为serialize值。   
+searchstring||text||否||搜索字符串
 
-字段 类型 Null 默认 注释
+useip||varchar(15)||否||搜索者IP
 
-type varchar(20) 否 关联主键，统计类别
+uid||mediumint(10)||否||0||搜索者UID
 
-variable varchar(20) 否 关联主键，统计变量名
+dateline||int(10)||否||0||搜索时间
 
-value mediumtext 否 统计值
+expiration||int(10)||否||0||有效期
 
-   
+threadtypeid||smallint(6)||否||0||搜索主题分类ID
 
-cdb_styles风格表   
+threads||smallint(6)||否||0||搜索结果主题数
 
-表说明：记录风格信息。   
+tids||text||否||搜索结果主题TID组
 
-字段 类型 Null 默认 注释
 
-styleid smallint(6) 否 主键，风格编号，自增
 
-name varchar(20) 否 风格名称
+cdb_sessions会话表
 
-available tinyint(1) 否 1 可用
+表说明：记录论坛访问会话信息。
 
-templateid smallint(6) 否 0 模板templateid
+字段||类型||Null||默认||注释
 
-   
+sid||char(6)||否||唯一，会话编号
 
-cdb_stylevars风格变量表   
+ip1||tinyint(3)||否||0||ip字段1
 
-表说明：记录风格变量信息。   
+ip2||tinyint(3)||否||0||ip字段2
 
-字段 类型 Null 默认 注释
+ip3||tinyint(3)||否||0||ip字段3
 
-stylevarid smallint(6) 否 主键，风格变量编号，自增
+ip4||tinyint(3)||否||0||ip字段4
 
-styleid smallint(6) 否 0 索引，所属风格STYLEID
+uid||mediumint(8)||否||0||索引，会话用户UID
 
-variable text 否 变量名
+username||char(15)||否||会话用户名
 
-substitute text 否 替换内容
+groupid||smallint(6)||否||0||会话用户组GROUPID
 
-   
+styleid||smallint(6)||否||0||会话用户风格STYLEID
 
-cdb_subscriptions订阅表   
+invisible||tinyint(1)||否||0||隐身登录
 
-表说明：记录订阅主题信息。   
+action||tinyint(1)||否||0||会话用户动作
 
-字段 类型 Null 默认 注释
+lastactivity||int(10)||否||0||最后活动时间
 
-uid mediumint(8) 否 0 关联主键，订阅者UID
+lastolupdate||int(10)||否||0||在线时间最后更新
 
-tid mediumint(8) 否 0 关联主键，订阅主题TID
+pageviews||smallint(6)||否||0||页面访问量
 
-lastpost int(10) 否 0 订阅主题最后发表时间
+seccode||mediumint(6)||否||0||验证码
 
-lastnotify int(10) 否 0 最后通知时间
+fid||smallint(6)||否||0||活动版块FID
 
-   
+tid||mediumint(8)||否||0||阅读主题TID
 
-cdb_tags标签表   
+bloguid||mediumint(8)||否||0||不详
 
-表说明：记录标签信息。   
 
-字段 类型 Null 默认 注释
 
-tagname char(20) 否 主键，标签名
+cdb_settings论坛设置表
 
-closed tinyint(1) 否 0 索引，标签关闭
+表说明：记录论坛设置信息。
 
-total mediumint(8) 否 索引，标签主题数
+字段||类型||Null||默认||注释
 
-   
+variable||varchar(32)||否||主键，论坛设置变量名
 
-cdb_templates模版表   
+value||text||否||论坛设置变量值
 
-表说明：记录模板信息。   
 
-字段 类型 Null 默认 注释
 
-templateid smallint(6) 否 主键，模板编号，自增
+cdb_smilies表情表
 
-name varchar(30) 否 模板名称
+表说明：记录表情信息。
 
-directory varchar(100) 否 所在目录
+字段||类型||Null||默认||注释
 
-copyright varchar(100) 否 版权信息
+id||smallint(6)||否||主键，表情编号，自增
 
-   
+typeid||smallint(6)||否||表情分类typeid
 
-cdb_threads主题表   
+displayorder||tinyint(3)||否||0||显示顺序
 
-表说明：记录主题信息。   
+type||enum('smiley',||'icon')||否||smiley||表情类型（smiley=表情||icon=主题图标）
 
-字段 类型 Null 默认 注释
+code||varchar(30)||否||表情代码
 
-tid mediumint(8) 否 主键，主题编号，自增
+url||varchar(30)||否||表情文件名
 
-fid smallint(6) 否 0 主题所在版块FID
 
-iconid smallint(6) 否 0 主题图标iconid
 
-typeid smallint(6) 否 0 索引，主题分类TYPEID
+cdb_spacecaches||minispace缓存表
 
-readperm tinyint(3) 否 0 主题阅读权限
+表说明：记录minispace缓存信息。value为serialize值。
 
-price smallint(6) 否 0 主题出售价格
+字段||类型||Null||默认||注释
 
-author char(15) 否 主题作者用户名
+uid||mediumint(8)||否||0||关联主键，空间用户UID
 
-authorid mediumint(8) 否 0 索引，主题作者UID
+variable||varchar(20)||否||关联主键，空间缓存变量名
 
-subject char(80) 否 主题标题
+value||text||否||空间缓存变量值
 
-dateline int(10) 否 0 主题发表时间
+expiration||int(10)||否||0||有效期
 
-lastpost int(10) 否 0 主题最后回复时间
 
-lastposter char(15) 否 主题最后回复作者
 
-views int(10) 否 0 主题浏览次数
+cdb_stats统计表
 
-replies mediumint(8) 否 0 主题回复次数
+表说明：记录论坛基本统计信息。
 
-displayorder tinyint(1) 否 0 索引，主题显示顺序
+字段||类型||Null||默认||注释
 
-highlight tinyint(1) 否 0 主题是否被高亮
+type||char(10)||否||关联主键，统计类别
 
-digest tinyint(1) 否 0 索引，主题精华级别
+variable||char(10)||否||关联主键，统计变量名
 
-rate tinyint(1) 否 0 主题评分（-1=反对 0=无 1=支持）
+count||int(10)||否||0||统计计数
 
-blog tinyint(1) 否 0 主题作者加入文集
 
-special tinyint(1) 否 0 特殊主题编码
 
-attachment tinyint(1) 否 0 主题包含附件
+cdb_statvars统计变量表
 
-subscribed tinyint(1) 否 0 主题被订阅
+表说明：记录论坛统计信息。Value根据统计类别不同可能为serialize值。
 
-moderated tinyint(1) 否 0 主题被管理
+字段||类型||Null||默认||注释
 
-closed mediumint(8) 否 0 主题关闭
+type||varchar(20)||否||关联主键，统计类别
 
-itemid mediumint(8) 否 0 SS项目itemid（SS相关）
+variable||varchar(20)||否||关联主键，统计变量名
 
-supe_pushstatus tinyint(1) 否 0 SS推送状态（SS相关）
+value||mediumtext||否||统计值
 
-   
 
-cdb_threadsmod主题管理记录表   
 
-表说明：记录主题管理操作信息。   
+cdb_styles风格表
 
-字段 类型 Null 默认 注释
+表说明：记录风格信息。
 
-tid mediumint(8) 否 0 索引，被管理主题TID
+字段||类型||Null||默认||注释
 
-uid mediumint(8) 否 0 管理者UID
+styleid||smallint(6)||否||主键，风格编号，自增
 
-username char(15) 否 管理者用户名
+name||varchar(20)||否||风格名称
 
-dateline int(10) 否 0 管理执行时间
+available||tinyint(1)||否||1||可用
 
-expiration int(10) 否 0 索引，管理有效期
+templateid||smallint(6)||否||0||模板templateid
 
-action char(5) 否 管理操作代码
 
-status tinyint(1) 否 0 管理操作状态（0=失效 1=有效）
 
-magicid smallint(6) 否 所使用道具magicid
+cdb_stylevars风格变量表
 
-   
+表说明：记录风格变量信息。
 
-cdb_threadtags主题标签表   
+字段||类型||Null||默认||注释
 
-表说明：记录主题标签关联信息。   
+stylevarid||smallint(6)||否||主键，风格变量编号，自增
 
-字段 类型 Null 默认 注释
+styleid||smallint(6)||否||0||索引，所属风格STYLEID
 
-tagname char(20) 否 索引，标签名称
+variable||text||否||变量名
 
-tid int(10) 否 索引，主题TID
+substitute||text||否||替换内容
 
-   
 
-cdb_threadtypes主题分类表   
 
-表说明：记录主题分类信息。   
+cdb_subscriptions订阅表
 
-字段 类型 Null 默认 注释
+表说明：记录订阅主题信息。
 
-typeid smallint(6) 否 主键，主题分类编号，自增
+字段||类型||Null||默认||注释
 
-displayorder tinyint(3) 否 0 显示顺序
+uid||mediumint(8)||否||0||关联主键，订阅者UID
 
-name varchar(255) 否 主题分类名称
+tid||mediumint(8)||否||0||关联主键，订阅主题TID
 
-description varchar(255) 否 主题分类描述
+lastpost||int(10)||否||0||订阅主题最后发表时间
 
-special smallint(6) 否 0 分类信息
+lastnotify||int(10)||否||0||最后通知时间
 
-modelid smallint(6) 否 0 分类信息模型ID
 
-expiration tinyint(1) 否 0 设置有效期
 
-template text 否 分类信息模板
+cdb_tags标签表
 
-   
+表说明：记录标签信息。
 
-cdb_tradecomments交易评价表   
+字段||类型||Null||默认||注释
 
-表说明：记录交易双方评价信息。   
+tagname||char(20)||否||主键，标签名
 
-字段 类型 Null 默认 注释
+closed||tinyint(1)||否||0||索引，标签关闭
 
-id mediumint(8) 否 主键，交易评价编号，自增
+total||mediumint(8)||否||索引，标签主题数
 
-orderid char(32) 否 索引，订单编号
 
-pid int(10) 否 评价贴PID
 
-type tinyint(1) 否 评价类型
+cdb_templates模版表
 
-raterid mediumint(8) 否 评价者UID
+表说明：记录模板信息。
 
-rater char(15) 否 评价者用户名
+字段||类型||Null||默认||注释
 
-rateeid mediumint(8) 否 被评价者UID
+templateid||smallint(6)||否||主键，模板编号，自增
 
-ratee char(15) 否 被评价者用户名
+name||varchar(30)||否||模板名称
 
-message char(200) 否 评价内容
+directory||varchar(100)||否||所在目录
 
-explanation char(200) 否 评价解释
+copyright||varchar(100)||否||版权信息
 
-score tinyint(1) 否 评价分数（-1=差评 0=中评 1=好评）
 
-dateline int(10) 否 评价时间
 
-   
+cdb_threads主题表
 
-cdb_tradelog交易记录表   
+表说明：记录主题信息。
 
-表说明：记录交易记录信息。   
+字段||类型||Null||默认||注释
 
-字段 类型 Null 默认 注释
+tid||mediumint(8)||否||主键，主题编号，自增
 
-tid mediumint(8) 否 索引，交易主题TID
+fid||smallint(6)||否||0||主题所在版块FID
 
-pid int(10) 否 索引，交易贴PID
+iconid||smallint(6)||否||0||主题图标iconid
 
-orderid varchar(32) 否 唯一，订单编号
+typeid||smallint(6)||否||0||索引，主题分类TYPEID
 
-tradeno varchar(32) 否 交易编号
+readperm||tinyint(3)||否||0||主题阅读权限
 
-subject varchar(100) 否 商品名称
+price||smallint(6)||否||0||主题出售价格
 
-price decimal(8,2) 否 商品价格
+author||char(15)||否||主题作者用户名
 
-quality tinyint(1) 否 0 商品质量（1=全新 2=二手）
+authorid||mediumint(8)||否||0||索引，主题作者UID
 
-itemtype tinyint(1) 否 0 商品类型
+subject||char(80)||否||主题标题
 
-number smallint(5) 否 0 商品数量
+dateline||int(10)||否||0||主题发表时间
 
-tax decimal(6,2) 否 0 手续费
+lastpost||int(10)||否||0||主题最后回复时间
 
-locus varchar(100) 否 所在地
+lastposter||char(15)||否||主题最后回复作者
 
-sellerid mediumint(8) 否 卖家UID
+views||int(10)||否||0||主题浏览次数
 
-seller varchar(15) 否 卖家用户名
+replies||mediumint(8)||否||0||主题回复次数
 
-selleraccount varchar(50) 否 卖家账户
+displayorder||tinyint(1)||否||0||索引，主题显示顺序
 
-buyerid mediumint(8) 否 买家UID
+highlight||tinyint(1)||否||0||主题是否被高亮
 
-buyer varchar(15) 否 买家用户名
+digest||tinyint(1)||否||0||索引，主题精华级别
 
-buyercontact varchar(50) 否 买家联系方式
+rate||tinyint(1)||否||0||主题评分（-1=反对||0=无||1=支持）
 
-buyercredits smallint(5) 否 0 买家诚信度
+blog||tinyint(1)||否||0||主题作者加入文集
 
-buyermsg varchar(200) 是 NULL 买家备注信息
+special||tinyint(1)||否||0||特殊主题编码
 
-status tinyint(1) 否 0 交易状态
+attachment||tinyint(1)||否||0||主题包含附件
 
-lastupdate int(10) 否 0 最后更新
+subscribed||tinyint(1)||否||0||主题被订阅
 
-offline tinyint(1) 否 0 线下交易
+moderated||tinyint(1)||否||0||主题被管理
 
-buyername varchar(50) 否 收货人姓名
+closed||mediumint(8)||否||0||主题关闭
 
-buyerzip varchar(10) 否 收货人邮编
+itemid||mediumint(8)||否||0||SS项目itemid（SS相关）
 
-buyerphone varchar(20) 否 收货人电话
+supe_pushstatus||tinyint(1)||否||0||SS推送状态（SS相关）
 
-buyermobile varchar(20) 否 收货人手机
 
-transport tinyint(1) 否 0 物流方式
 
-transportfee smallint(6) 否 0 运费
+cdb_threadsmod主题管理记录表
 
-baseprice decimal(8,2) 否 底价
+表说明：记录主题管理操作信息。
 
-discount tinyint(1) 否 0 折扣
+字段||类型||Null||默认||注释
 
-ratestatus tinyint(1) 否 0 信用评价状态
+tid||mediumint(8)||否||0||索引，被管理主题TID
 
-message text 否 交易相关信息
+uid||mediumint(8)||否||0||管理者UID
 
-   
+username||char(15)||否||管理者用户名
 
-cdb_tradeoptionvars交易项目变量表   
+dateline||int(10)||否||0||管理执行时间
 
-表说明：记录交易项目变量信息。   
+expiration||int(10)||否||0||索引，管理有效期
 
-字段 类型 Null 默认 注释
+action||char(5)||否||管理操作代码
 
-typeid smallint(6) 否 0 索引，商品分类typeid
+status||tinyint(1)||否||0||管理操作状态（0=失效||1=有效）
 
-pid mediumint(8) 否 0 索引，交易贴PID
+magicid||smallint(6)||否||所使用道具magicid
 
-optionid smallint(6) 否 0 分类项目optionid
 
-value mediumtext 否 项目值
 
-   
+cdb_threadtags主题标签表
 
-cdb_trades交易表   
+表说明：记录主题标签关联信息。
 
-表说明：记录交易信息。   
+字段||类型||Null||默认||注释
 
-字段 类型 Null 默认 注释
+tagname||char(20)||否||索引，标签名称
 
-tid mediumint(8) 否 关联主键，交易主题TID
+tid||int(10)||否||索引，主题TID
 
-pid int(10) 否 关联主键，交易贴PID
 
-typeid smallint(6) 否 索引，商品分类typeid
 
-sellerid mediumint(8) 否 索引，卖家UID
+cdb_threadtypes主题分类表
 
-seller char(15) 否 卖家用户名
+表说明：记录主题分类信息。
 
-account char(50) 否 卖家账户
+字段||类型||Null||默认||注释
 
-subject char(100) 否 商品名称
+typeid||smallint(6)||否||主键，主题分类编号，自增
 
-price decimal(8,2) 否 商品价格
+displayorder||tinyint(3)||否||0||显示顺序
 
-amount smallint(6) 否 1 库存数
+name||varchar(255)||否||主题分类名称
 
-quality tinyint(1) 否 0 商品质量（1=全新 2=二手）
+description||varchar(255)||否||主题分类描述
 
-locus char(20) 否 所在地
+special||smallint(6)||否||0||分类信息
 
-transport tinyint(1) 否 0 物流方式
+modelid||smallint(6)||否||0||分类信息模型ID
 
-ordinaryfee smallint(4) 否 0 平邮运费
+expiration||tinyint(1)||否||0||设置有效期
 
-expressfee smallint(4) 否 0 快递运费
+template||text||否||分类信息模板
 
-emsfee smallint(4) 否 0 EMS运费
 
-itemtype tinyint(1) 否 0 商品类型
 
-dateline int(10) 否 0 上架时间
+cdb_tradecomments交易评价表
 
-expiration int(10) 否 0 有效期
+表说明：记录交易双方评价信息。
 
-lastbuyer char(15) 否 最新买家
+字段||类型||Null||默认||注释
 
-lastupdate int(10) 否 0 最后更新时间
+id||mediumint(8)||否||主键，交易评价编号，自增
 
-totalitems smallint(5) 否 0 索引，售出数量
+orderid||char(32)||否||索引，订单编号
 
-tradesum decimal(8,2) 否 0 索引，总销售额
+pid||int(10)||否||评价贴PID
 
-closed tinyint(1) 否 0 交易结束
+type||tinyint(1)||否||评价类型
 
-aid mediumint(8) 否 商品图片附件AID
+raterid||mediumint(8)||否||评价者UID
 
-displayorder tinyint(1) 否 索引，显示顺序
+rater||char(15)||否||评价者用户名
 
-costprice decimal(8,2) 否 原价
+rateeid||mediumint(8)||否||被评价者UID
 
-   
+ratee||char(15)||否||被评价者用户名
 
-cdb_typemodels分类信息模型表   
+message||char(200)||否||评价内容
 
-表说明：记录分类信息模型信息。   
+explanation||char(200)||否||评价解释
 
-字段 类型 Null 默认 注释
+score||tinyint(1)||否||评价分数（-1=差评||0=中评||1=好评）
 
-id smallint(6) 否 主键，分类模型编号，自增
+dateline||int(10)||否||评价时间
 
-name varchar(20) 否 模型名称
 
-displayorder tinyint(3) 否 0 显示顺序
 
-type tinyint(1) 否 0 模型类型
+cdb_tradelog交易记录表
 
-options mediumtext 否 系统选项（\t分隔）
+表说明：记录交易记录信息。
 
-customoptions mediumtext 否 用户自定义选项（\t分隔）
+字段||类型||Null||默认||注释
 
-   
+tid||mediumint(8)||否||索引，交易主题TID
 
-cdb_typeoptions分类信息项目表   
+pid||int(10)||否||索引，交易贴PID
 
-表说明：记录分类信息项目信息。rules为serialize值。   
+orderid||varchar(32)||否||唯一，订单编号
 
-字段 类型 Null 默认 注释
+tradeno||varchar(32)||否||交易编号
 
-optionid smallint(6) 否 主键，分类信息项目编号，自增
+subject||varchar(100)||否||商品名称
 
-classid smallint(6) 否 0 所属类别ID（上级项目optionid）
+price||decimal(8,2)||否||商品价格
 
-displayorder tinyint(3) 否 0 显示顺序
+quality||tinyint(1)||否||0||商品质量（1=全新||2=二手）
 
-title varchar(100) 否 项目名称
+itemtype||tinyint(1)||否||0||商品类型
 
-description varchar(255) 否 项目简短描述
+number||smallint(5)||否||0||商品数量
 
-identifier varchar(40) 否 项目变量名
+tax||decimal(6,2)||否||0||手续费
 
-type varchar(20) 否 项目类型
+locus||varchar(100)||否||所在地
 
-rules mediumtext 否 项目规则
+sellerid||mediumint(8)||否||卖家UID
 
-   
+seller||varchar(15)||否||卖家用户名
 
-cdb_typeoptionvars分类信息项目变量表   
+selleraccount||varchar(50)||否||卖家账户
 
-表说明：记录分类信息项目变量信息。   
+buyerid||mediumint(8)||否||买家UID
 
-字段 类型 Null 默认 注释
+buyer||varchar(15)||否||买家用户名
 
-typeid smallint(6) 否 0 索引，分类TYPEID
+buyercontact||varchar(50)||否||买家联系方式
 
-tid mediumint(8) 否 0 索引，分类主题TID
+buyercredits||smallint(5)||否||0||买家诚信度
 
-optionid smallint(6) 否 0 分类信息项目OPTIONID
+buyermsg||varchar(200)||是||NULL||买家备注信息
 
-expiration int(10) 否 0 有效期
+status||tinyint(1)||否||0||交易状态
 
-value mediumtext 否 分类信息项目变量值
+lastupdate||int(10)||否||0||最后更新
 
-   
+offline||tinyint(1)||否||0||线下交易
 
-cdb_typevars分类信息变量表   
+buyername||varchar(50)||否||收货人姓名
 
-表说明：记录分类与选项关联信息。   
+buyerzip||varchar(10)||否||收货人邮编
 
-字段 类型 Null 默认 注释
+buyerphone||varchar(20)||否||收货人电话
 
-typeid smallint(6) 否 0 关联唯一索引，索引，分类TYPEID
+buyermobile||varchar(20)||否||收货人手机
 
-optionid smallint(6) 否 0 关联唯一索引，分类信息项目OPTIONID
+transport||tinyint(1)||否||0||物流方式
 
-available tinyint(1) 否 0 可用
+transportfee||smallint(6)||否||0||运费
 
-required tinyint(1) 否 0 必填
+baseprice||decimal(8,2)||否||底价
 
-unchangeable tinyint(1) 否 0 不可修改
+discount||tinyint(1)||否||0||折扣
 
-search tinyint(1) 否 0 参与搜索
+ratestatus||tinyint(1)||否||0||信用评价状态
 
-displayorder tinyint(3) 否 0 显示顺序
+message||text||否||交易相关信息
 
-   
 
-cdb_usergroups用户组表   
 
-表说明：记录用户组及其权限信息。   
+cdb_tradeoptionvars交易项目变量表
 
-字段 类型 Null 默认 注释
+表说明：记录交易项目变量信息。
 
-groupid smallint(6) 否 主键，用户组编号，自增
+字段||类型||Null||默认||注释
 
-radminid tinyint(3) 否 0 关联管理权
+typeid||smallint(6)||否||0||索引，商品分类typeid
 
-type enum('system', 'special', 'member') 否 member 组类型（system=系统 special=特殊 member=会员）
+pid||mediumint(8)||否||0||索引，交易贴PID
 
-system char(8) 否 private 组体制（private=非公共 *\t*=日价格\t最短时间）
+optionid||smallint(6)||否||0||分类项目optionid
 
-grouptitle char(30) 否 用户组头衔
+value||mediumtext||否||项目值
 
-creditshigher int(10) 否 0 积分上限
 
-creditslower int(10) 否 0 积分下限
 
-stars tinyint(3) 否 0 星星数
+cdb_trades交易表
 
-color char(7) 否 组头衔颜色
+表说明：记录交易信息。
 
-groupavatar char(60) 否 组头像
+字段||类型||Null||默认||注释
 
-readaccess tinyint(3) 否 0 阅读权限
+tid||mediumint(8)||否||关联主键，交易主题TID
 
-allowvisit tinyint(1) 否 0 允许访问
+pid||int(10)||否||关联主键，交易贴PID
 
-allowpost tinyint(1) 否 0 允许发新话题
+typeid||smallint(6)||否||索引，商品分类typeid
 
-allowreply tinyint(1) 否 0 允许发表回复
+sellerid||mediumint(8)||否||索引，卖家UID
 
-allowpostpoll tinyint(1) 否 0 允许发起投票
+seller||char(15)||否||卖家用户名
 
-allowpostreward tinyint(1) 否 0 允许发起悬赏
+account||char(50)||否||卖家账户
 
-allowposttrade tinyint(1) 否 0 允许发布商品
+subject||char(100)||否||商品名称
 
-allowpostactivity tinyint(1) 否 0 允许发起活动
+price||decimal(8,2)||否||商品价格
 
-allowpostvideo tinyint(1) 否 0 允许发布视频
+amount||smallint(6)||否||1||库存数
 
-allowdirectpost tinyint(1) 否 0 允许直接发帖
+quality||tinyint(1)||否||0||商品质量（1=全新||2=二手）
 
-allowgetattach tinyint(1) 否 0 允许下载/查看附件
+locus||char(20)||否||所在地
 
-allowpostattach tinyint(1) 否 0 允许发布附件
+transport||tinyint(1)||否||0||物流方式
 
-allowvote tinyint(1) 否 0 允许参与投票
+ordinaryfee||smallint(4)||否||0||平邮运费
 
-allowmultigroups tinyint(1) 否 0 允许加入/离开公众用户组
+expressfee||smallint(4)||否||0||快递运费
 
-allowsearch tinyint(1) 否 0 允许使用搜索
+emsfee||smallint(4)||否||0||EMS运费
 
-allowavatar tinyint(1) 否 0 允许使用头像
+itemtype||tinyint(1)||否||0||商品类型
 
-allowcstatus tinyint(1) 否 0 允许自定义头衔
+dateline||int(10)||否||0||上架时间
 
-allowuseblog tinyint(1) 否 0 允许使用文集
+expiration||int(10)||否||0||有效期
 
-allowinvisible tinyint(1) 否 0 允许隐身
+lastbuyer||char(15)||否||最新买家
 
-allowtransfer tinyint(1) 否 0 允许积分转账
+lastupdate||int(10)||否||0||最后更新时间
 
-allowsetreadperm tinyint(1) 否 0 允许设置帖子权限
+totalitems||smallint(5)||否||0||索引，售出数量
 
-allowsetattachperm tinyint(1) 否 0 允许设置附件权限
+tradesum||decimal(8,2)||否||0||索引，总销售额
 
-allowhidecode tinyint(1) 否 0 允许使用 [hide] 代码
+closed||tinyint(1)||否||0||交易结束
 
-allowhtml tinyint(1) 否 0 允许使用 HTML 代码
+aid||mediumint(8)||否||商品图片附件AID
 
-allowcusbbcode tinyint(1) 否 0 允许使用自定义 Discuz! 代码
+displayorder||tinyint(1)||否||索引，显示顺序
 
-allowanonymous tinyint(1) 否 0 允许发匿名贴
+costprice||decimal(8,2)||否||原价
 
-allownickname tinyint(1) 否 0 允许使用昵称
 
-allowsigbbcode tinyint(1) 否 0 允许签名中使用 Discuz! 代码
 
-allowsigimgcode tinyint(1) 否 0 允许签名中使用 [img] 代码
+cdb_typemodels分类信息模型表
 
-allowviewpro tinyint(1) 否 0 允许查看用户资料
+表说明：记录分类信息模型信息。
 
-allowviewstats tinyint(1) 否 0 允许查看统计数据
+字段||类型||Null||默认||注释
 
-disableperiodctrl tinyint(1) 否 0 不受时间段限制
+id||smallint(6)||否||主键，分类模型编号，自增
 
-reasonpm tinyint(1) 否 0 操作理由短消息通知作者
+name||varchar(20)||否||模型名称
 
-maxprice smallint(6) 否 0 主题(附件)最高售价
+displayorder||tinyint(3)||否||0||显示顺序
 
-maxpmnum smallint(6) 否 0 短消息收件箱容量
+type||tinyint(1)||否||0||模型类型
 
-maxsigsize smallint(6) 否 0 签名文字最大长度
+options||mediumtext||否||系统选项（\t分隔）
 
-maxattachsize mediumint(8) 否 0 最大附件尺寸(字节)
+customoptions||mediumtext||否||用户自定义选项（\t分隔）
 
-maxsizeperday int(10) 否 0 每天最大附件总尺寸(字节)
 
-maxpostsperhour tinyint(3) 否 0 会员每小时发帖数限制
 
-attachextensions char(100) 否 允许附件类型
+cdb_typeoptions分类信息项目表
 
-raterange char(150) 否 参与评分相关
+表说明：记录分类信息项目信息。rules为serialize值。
 
-mintradeprice smallint(6) 否 1 最小交易金额
+字段||类型||Null||默认||注释
 
-maxtradeprice smallint(6) 否 0 最大交易金额
+optionid||smallint(6)||否||主键，分类信息项目编号，自增
 
-minrewardprice smallint(6) 否 1 最小悬赏积分
+classid||smallint(6)||否||0||所属类别ID（上级项目optionid）
 
-maxrewardprice smallint(6) 否 0 最大悬赏积分
+displayorder||tinyint(3)||否||0||显示顺序
 
-magicsdiscount tinyint(1) 否 购买道具折扣
+title||varchar(100)||否||项目名称
 
-allowmagics tinyint(1) 否 允许使用道具
+description||varchar(255)||否||项目简短描述
 
-maxmagicsweight smallint(6) 否 最大携带重量
+identifier||varchar(40)||否||项目变量名
 
-allowbiobbcode tinyint(1) 否 0 允许自我介绍中使用 Discuz! 代码
+type||varchar(20)||否||项目类型
 
-allowbioimgcode tinyint(1) 否 0 允许自我介绍中使用 [img] 代码
+rules||mediumtext||否||项目规则
 
-maxbiosize smallint(6) 否 0 自我介绍文字最大长度
 
-allowinvite tinyint(1) 否 0 允许使用邀请注册
 
-allowmailinvite tinyint(1) 否 0 允许发送邀请注册
+cdb_typeoptionvars分类信息项目变量表
 
-maxinvitenum tinyint(3) 否 0 24小时内购买邀请码最大数量
+表说明：记录分类信息项目变量信息。
 
-inviteprice smallint(6) 否 0 邀请码购买价格
+字段||类型||Null||默认||注释
 
-maxinviteday smallint(6) 否 0 邀请码有效期
+typeid||smallint(6)||否||0||索引，分类TYPEID
 
-allowpostdebate tinyint(1) 否 0 允许发起辩论
+tid||mediumint(8)||否||0||索引，分类主题TID
 
-tradestick tinyint(1) 否 商品主题最多推荐商品数
+optionid||smallint(6)||否||0||分类信息项目OPTIONID
 
-   
+expiration||int(10)||否||0||有效期
 
-cdb_validating用户审核表   
+value||mediumtext||否||分类信息项目变量值
 
-表说明：记录审核信息。   
 
-字段 类型 Null 默认 注释
 
-uid mediumint(8) 否 0 主键，审核用户UID
+cdb_typevars分类信息变量表
 
-submitdate int(10) 否 0 提交时间
+表说明：记录分类与选项关联信息。
 
-moddate int(10) 否 0 审核时间
+字段||类型||Null||默认||注释
 
-admin varchar(15) 否 审核操作者用户名
+typeid||smallint(6)||否||0||关联唯一索引，索引，分类TYPEID
 
-submittimes tinyint(3) 否 0 提交次数
+optionid||smallint(6)||否||0||关联唯一索引，分类信息项目OPTIONID
 
-status tinyint(1) 否 0 审核状态
+available||tinyint(1)||否||0||可用
 
-message text 否 注册原因
+required||tinyint(1)||否||0||必填
 
-remark text 否 管理员留言
+unchangeable||tinyint(1)||否||0||不可修改
 
-   
+search||tinyint(1)||否||0||参与搜索
 
-cdb_videos视频表   
+displayorder||tinyint(3)||否||0||显示顺序
 
-表说明：记录视频主题信息。   
 
-字段 类型 Null 默认 注释
 
-vid varchar(16) 否 关联唯一索引，主键，视频编号
+cdb_usergroups用户组表
 
-uid mediumint(8) 否 0 关联唯一索引，发布者UID
+表说明：记录用户组及其权限信息。
 
-dateline int(10) 否 0 索引，发布时间
+字段||类型||Null||默认||注释
 
-tid mediumint(8) 否 0 所在主题TID
+groupid||smallint(6)||否||主键，用户组编号，自增
 
-pid int(10) 否 0 所在帖子PID
+radminid||tinyint(3)||否||0||关联管理权
 
-vtype tinyint(1) 否 0 视频分类
+type||enum('system',||'special',||'member')||否||member||组类型（system=系统||special=特殊||member=会员）
 
-vview mediumint(8) 否 0 视频浏览次数
+system||char(8)||否||private||组体制（private=非公共||*\t*=日价格\t最短时间）
 
-vtime smallint(6) 否 0 视频时长
+grouptitle||char(30)||否||用户组头衔
 
-visup tinyint(1) 否 0 上传视频
+creditshigher||int(10)||否||0||积分上限
 
-vthumb varchar(128) 否 视频缩略图地址
+creditslower||int(10)||否||0||积分下限
 
-vtitle varchar(64) 否 视频标题
+stars||tinyint(3)||否||0||星星数
 
-vclass varchar(32) 否 视频分类
+color||char(7)||否||组头衔颜色
 
-vautoplay tinyint(1) 否 0 自动播放
+groupavatar||char(60)||否||组头像
 
-   
+readaccess||tinyint(3)||否||0||阅读权限
 
-cdb_videotags视频标签表   
+allowvisit||tinyint(1)||否||0||允许访问
 
-表说明：记录视频标签信息。   
+allowpost||tinyint(1)||否||0||允许发新话题
 
-字段 类型 Null 默认 注释
+allowreply||tinyint(1)||否||0||允许发表回复
 
-tagname char(10) 否 关联唯一索引，标签名称
+allowpostpoll||tinyint(1)||否||0||允许发起投票
 
-vid char(14) 否 关联唯一索引，视频VID
+allowpostreward||tinyint(1)||否||0||允许发起悬赏
 
-tid mediumint(8) 否 0 索引，所在主题TID
+allowposttrade||tinyint(1)||否||0||允许发布商品
 
-   
+allowpostactivity||tinyint(1)||否||0||允许发起活动
 
-cdb_words词语过滤表   
+allowpostvideo||tinyint(1)||否||0||允许发布视频
 
-表说明：记录词语过滤信息。   
+allowdirectpost||tinyint(1)||否||0||允许直接发帖
 
-字段 类型 Null 默认 注释
+allowgetattach||tinyint(1)||否||0||允许下载/查看附件
 
-id smallint(6) 否 主键，词语过滤编号
+allowpostattach||tinyint(1)||否||0||允许发布附件
 
-admin varchar(15) 否 管理员用户名
+allowvote||tinyint(1)||否||0||允许参与投票
 
-find varchar(255) 否 被过滤词语
+allowmultigroups||tinyint(1)||否||0||允许加入/离开公众用户组
 
-replacement varchar(255) 否 替换词语
+allowsearch||tinyint(1)||否||0||允许使用搜索
+
+allowavatar||tinyint(1)||否||0||允许使用头像
+
+allowcstatus||tinyint(1)||否||0||允许自定义头衔
+
+allowuseblog||tinyint(1)||否||0||允许使用文集
+
+allowinvisible||tinyint(1)||否||0||允许隐身
+
+allowtransfer||tinyint(1)||否||0||允许积分转账
+
+allowsetreadperm||tinyint(1)||否||0||允许设置帖子权限
+
+allowsetattachperm||tinyint(1)||否||0||允许设置附件权限
+
+allowhidecode||tinyint(1)||否||0||允许使用||[hide]||代码
+
+allowhtml||tinyint(1)||否||0||允许使用||HTML||代码
+
+allowcusbbcode||tinyint(1)||否||0||允许使用自定义||Discuz!||代码
+
+allowanonymous||tinyint(1)||否||0||允许发匿名贴
+
+allownickname||tinyint(1)||否||0||允许使用昵称
+
+allowsigbbcode||tinyint(1)||否||0||允许签名中使用||Discuz!||代码
+
+allowsigimgcode||tinyint(1)||否||0||允许签名中使用||[img]||代码
+
+allowviewpro||tinyint(1)||否||0||允许查看用户资料
+
+allowviewstats||tinyint(1)||否||0||允许查看统计数据
+
+disableperiodctrl||tinyint(1)||否||0||不受时间段限制
+
+reasonpm||tinyint(1)||否||0||操作理由短消息通知作者
+
+maxprice||smallint(6)||否||0||主题(附件)最高售价
+
+maxpmnum||smallint(6)||否||0||短消息收件箱容量
+
+maxsigsize||smallint(6)||否||0||签名文字最大长度
+
+maxattachsize||mediumint(8)||否||0||最大附件尺寸(字节)
+
+maxsizeperday||int(10)||否||0||每天最大附件总尺寸(字节)
+
+maxpostsperhour||tinyint(3)||否||0||会员每小时发帖数限制
+
+attachextensions||char(100)||否||允许附件类型
+
+raterange||char(150)||否||参与评分相关
+
+mintradeprice||smallint(6)||否||1||最小交易金额
+
+maxtradeprice||smallint(6)||否||0||最大交易金额
+
+minrewardprice||smallint(6)||否||1||最小悬赏积分
+
+maxrewardprice||smallint(6)||否||0||最大悬赏积分
+
+magicsdiscount||tinyint(1)||否||购买道具折扣
+
+allowmagics||tinyint(1)||否||允许使用道具
+
+maxmagicsweight||smallint(6)||否||最大携带重量
+
+allowbiobbcode||tinyint(1)||否||0||允许自我介绍中使用||Discuz!||代码
+
+allowbioimgcode||tinyint(1)||否||0||允许自我介绍中使用||[img]||代码
+
+maxbiosize||smallint(6)||否||0||自我介绍文字最大长度
+
+allowinvite||tinyint(1)||否||0||允许使用邀请注册
+
+allowmailinvite||tinyint(1)||否||0||允许发送邀请注册
+
+maxinvitenum||tinyint(3)||否||0||24小时内购买邀请码最大数量
+
+inviteprice||smallint(6)||否||0||邀请码购买价格
+
+maxinviteday||smallint(6)||否||0||邀请码有效期
+
+allowpostdebate||tinyint(1)||否||0||允许发起辩论
+
+tradestick||tinyint(1)||否||商品主题最多推荐商品数
+
+
+
+cdb_validating用户审核表
+
+表说明：记录审核信息。
+
+字段||类型||Null||默认||注释
+
+uid||mediumint(8)||否||0||主键，审核用户UID
+
+submitdate||int(10)||否||0||提交时间
+
+moddate||int(10)||否||0||审核时间
+
+admin||varchar(15)||否||审核操作者用户名
+
+submittimes||tinyint(3)||否||0||提交次数
+
+status||tinyint(1)||否||0||审核状态
+
+message||text||否||注册原因
+
+remark||text||否||管理员留言
+
+
+
+cdb_videos视频表
+
+表说明：记录视频主题信息。
+
+字段||类型||Null||默认||注释
+
+vid||varchar(16)||否||关联唯一索引，主键，视频编号
+
+uid||mediumint(8)||否||0||关联唯一索引，发布者UID
+
+dateline||int(10)||否||0||索引，发布时间
+
+tid||mediumint(8)||否||0||所在主题TID
+
+pid||int(10)||否||0||所在帖子PID
+
+vtype||tinyint(1)||否||0||视频分类
+
+vview||mediumint(8)||否||0||视频浏览次数
+
+vtime||smallint(6)||否||0||视频时长
+
+visup||tinyint(1)||否||0||上传视频
+
+vthumb||varchar(128)||否||视频缩略图地址
+
+vtitle||varchar(64)||否||视频标题
+
+vclass||varchar(32)||否||视频分类
+
+vautoplay||tinyint(1)||否||0||自动播放
+
+
+
+cdb_videotags视频标签表
+
+表说明：记录视频标签信息。
+
+字段||类型||Null||默认||注释
+
+tagname||char(10)||否||关联唯一索引，标签名称
+
+vid||char(14)||否||关联唯一索引，视频VID
+
+tid||mediumint(8)||否||0||索引，所在主题TID
+
+
+
+cdb_words词语过滤表
+
+表说明：记录词语过滤信息。
+
+字段||类型||Null||默认||注释
+
+id||smallint(6)||否||主键，词语过滤编号
+
+admin||varchar(15)||否||管理员用户名
+
+find||varchar(255)||否||被过滤词语
+
+replacement||varchar(255)||否||替换词语
