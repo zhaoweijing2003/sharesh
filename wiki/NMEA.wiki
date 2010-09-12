@@ -1,4 +1,4 @@
-#NMEA0183协议概览
+#summary NMEA0183协议概览
 
 NMEA是National Marine Electronics Association（美国国家海事电子协会）的缩写。该协会是一家专门从事海洋电子设备方面研究的民间机构，它制定了关于GPS（全球定位系统）电子设备之间的通信接口和协议的NMEA标准。
 
