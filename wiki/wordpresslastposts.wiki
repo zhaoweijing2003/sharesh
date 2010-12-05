@@ -1,0 +1,6 @@
+#summary 两句话调用wordpress最新文章
+
+{{{
+<?php require('wp-blog-header.php'); ?>
+<?php get_archives('postbypost', 10); ?>
+}}}
