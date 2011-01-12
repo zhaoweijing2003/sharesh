@@ -6,6 +6,7 @@ cd – /* 回上一级目录 */
 cd ~ /* 回根目录 */
 mv tools tool /* 把tools目录改名为tool */
 ln -s tool bac
+zip -r filename.zip filesdir
 
 /* 给tool目录创建名为bac的符号链接,最熟悉的应该就是FTP中www链接到public_html目录了 */
 
