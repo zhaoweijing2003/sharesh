@@ -1,0 +1,27 @@
+#summary Windows Mobile系统发展简史
+
+1、自1996年推出Windows CE 1.0 (1996)
+
+2、Windows CE 2.11/Palmsize-PC (1998)
+
+中文版CE 2.11 推出(1999)
+
+3、首个Pocket PC (Windows CE 3.0) (2000)
+
+4、Pocket PC 2002(Windows CE 3.2) (2002)
+
+分为Pocket PC和Smart Phone两个版本
+
+5、Windows Mobile 2003(Windows CE .NET 4.1) (2003)
+
+6、Windows Mobile 2003 SE(Windows CE 4.21)
+
+7、Windows Mobile 5.0(Windows CE 5.0) (2005)
+
+8、Windows Mobile 6.0(Windows CE 5.2) (2007)
+
+9、Windows Mobile 6.1(Windows CE 5.2) (2008)
+
+10、Windows Mobile 6.5 (2009)
+
+11、Windows Phone 7 (2010)
