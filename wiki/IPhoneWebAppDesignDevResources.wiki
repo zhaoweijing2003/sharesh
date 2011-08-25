@@ -1,0 +1,43 @@
+#summary IPhone WebApp 设计开发工具与资源
+
+IPhone 的 App 固然有很多吸引人的地方，然而Web毕竟是大势所趋，已经有越来越多应用用 WebApp 的方式来实现了。所谓 WebApp，说白了就是Web应用而已，只不过是专门对手机尤其是IPhone的特点来定制界面，更有甚者，把界面做的跟本地IPhone App一摸一样，以至于我们都难以区分它是一个App还是一个Web。
+
+===优秀的WebApp===
+
+先来看看各种漂亮的WebApp，除了用IPhone上的safari里面的默认书签，进到IPhone 的 WebApp 列表 http://www.apple.com/webapps/， 还有不少地方能看到WebApp的展示，如http://cssiphone.com/  汇集了各种优秀的IPhone站点，这些优秀的CSS设计可以给你不少灵感
+
+===IPhone 设计素材===
+
+    IPhone 程序的视觉设计，有一套psd文件真是太流行了，那就是 http://www.teehanlax.com/blog/2009/06/18/iphone-gui-psd-30/，IPad出来时，他们又推出了IPad psd文件http://www.teehanlax.com/blog/2010/02/01/ipad-gui-psd/，让我们对 teehanlax 这个设计公司肃然起敬。 还有最新的 iPhone Sketch Elements AI， 更适合于设计IPhone产品时候做草图。
+
+    另一个IPhone 矢量元素图 http://www.mercuryintermedia.com/blog/index.php/2009/03/iphone-ui-vector-elements
+
+    另一个IPad psd文件 http://www.rawapps.com/849/ipad-gui-kit-in-psd-format-is-here/ 
+
+===WebApp开发框架===
+
+    IUI  http://code.google.com/p/iui/  是一个为IPhone等设备定制的css和js框架，可以用web来实现Iphone app的效果,  http://video.yahoo.com/watch/853528/3491272 是一个介绍IUI的视频，你还可以学到IPhone上的safari的独特的地方。
+
+    http://iwebkit.net/ 是一个很强大的框架，可以从 http://iwebkit.net/gallery  看它的 Gallery
+
+    http://webapp-net.com/ 也是一个类似的框架，http://demo.webapp-net.com/ 看它的demo,  它的动画效果在chrome中也能展现！
+
+    http://phonegap.com/ 也相当不错，特色是支持iPhone, Android, Palm, Symbian 和 Blackberry，它其实是一个xcode的库，需要编译成app来支持其特性。另一方面说，这个库实现的才是一个真正的app，其他的多是web而已。
+
+    http://www.jqtouch.com/ 有很多人推荐这个，它的demo一定会让你喜欢，缺点是文档比较少。
+
+    这么多东西，一时间看不过来，尽快搞清楚原理才是正道，oreilly 居然还有一本书专门讲用html, css, javascript 来实现Iphone app，就叫做Building iPhone Apps with HTML, CSS, and JavaScript， 点击 http://building-iphone-apps.labs.oreilly.com/index.html 可以在线阅读，也可以从 http://www.stopdownloading.com/book/402/ 下载pdf 版本
+
+    当然，最后不要忘了Apple的Dashcode。
+
+===IPhone App第三方库===
+
+    TouchJSON 是一个轻量级的Object-C 写成的 JSON decode/encode 库，使用起来很方便，项目主页在 http://code.google.com/p/touchcode/wiki/TouchJSON
+
+    ASIHTTP 是一个Object-C 的http库，提供比较高层的HTTP操作，使用很方便，功能很强大，并且对Amazon的云服务有少量支持并持续更新中，主页 http://allseeing-i.com/ASIHTTPRequest/
+
+    Three20 是一个非常著名的IPhone UI库，来源于facebook的IPhone App，可以实现很多强大的UI效果，主页在 http://github.com/facebook/three20
+
+===其他IPhone资源站点===
+
+     http://iphonetoolbox.com/  提供关于iphone开发的各种资源与新闻。
