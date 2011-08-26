@@ -1,0 +1,739 @@
+#summary 机场代码四字码
+
+共367笔，可能不全。
+
+
+
+ZBAA	北京首都国际机场
+
+ZYCC	长春龙嘉机场
+
+ZGHA	长沙黄花机场
+
+ZUUU	成都双流机场
+
+ZUGY	贵阳龙洞堡机场
+
+ZGGG	广州白云机场
+
+ZGKL	桂林两江机场
+
+ZYHB	哈尔滨太平机场
+
+ZSFZ	福州长乐机场
+
+ZJHK	海口美兰机场
+
+ZBHH	呼和浩特白塔机场
+
+ZSNJ	南京禄口机场
+
+ZPPP	昆明巫家坝机场
+
+ZULS	拉萨贡嘎机场
+
+ZLLL	兰州中川机场
+
+ZPLJ	丽江三义机场
+
+ZSQD	青岛流亭机场
+
+ZJSY	三亚凤凰国际机场
+
+ZSSS	上海虹桥机场
+
+ZSSL	上海龙华机场
+
+ZSPD	上海浦东机场
+
+ZGSZ	深圳宝安国际机场
+
+ZYTX	沈阳桃仙机场
+
+ZBSJ	石家庄正定机场
+
+ZBYN	太原武宿机场
+
+ZBTJ	天津滨海机场
+
+ZHHH	武汉天河机场
+
+ZLXN	西宁曹家堡机场
+
+ZSAM	厦门高崎机场
+
+ZLIC	银川河东机场
+
+ZGSD	珠海三灶机场
+
+ZWWW	乌鲁木齐地窝铺机场
+
+ZLXY	西安咸阳机场
+
+ZSJN	济南遥墙机场
+
+ZWAK	阿克苏机场
+
+ZWAT	阿勒泰机场
+
+ZLAK	安康机场
+
+ZSAQ	安庆天柱山机场
+
+ZUAS	安顺黄果树机场
+
+ZHAY	安阳北郊机场
+
+ZYAS	鞍山机场
+
+ZSBB	蚌埠机场
+
+ZBOW	包头二里半机场
+
+ZPBS	保山云瑞机场
+
+ZGBH	北海福城机场
+
+ZBBB	北京南苑机场
+
+ZUBD	昌都邦达机场
+
+ZGCS	长沙大托铺机场
+
+ZBCZ	长治机场
+
+ZSCG	常州奔牛机场
+
+ZYCY	朝阳机场
+
+ZUDS	成都太平寺机场
+
+ZUXJ	成都新津机场
+
+ZBCF	赤峰土城子机场
+
+ZUDX	达县机场
+
+ZPDL	大理机场
+
+ZYTL	大连周水子机场
+
+ZBDT	大同机场
+
+ZUDZ	大足机场
+
+ZYDD	丹东浪头机场
+
+ZPDQ	迪庆机场
+
+ZSDY	东营机场
+
+ZLDH	敦煌机场
+
+ZBDS	鄂尔多斯伊金霍洛机场
+
+ZHES	恩施机场
+
+ZGFS	佛山机场
+
+ZSFY	阜阳机场
+
+ZSGZ	赣州黄金机场
+
+ZLGM	格尔木机场
+
+ZHGH	光华老河口机场
+
+ZUGH	广汉机场
+
+ZUGU	广元机场
+
+ZWHM	哈密机场
+
+ZLHZ	汉中西关机场
+
+ZSHC	杭州萧山机场
+
+ZSOF	合肥骆岗机场
+
+ZWTN	和田机场
+
+ZYHE	黑河机场
+
+ZGHY	衡阳机场
+
+ZGCJ	怀化芷江机场
+
+ZSTX	黄山屯溪机场
+
+ZGHZ	惠州机场
+
+ZSJA	吉安机场
+
+ZYJL	吉林二台子机场
+
+ZSJG	济宁机场
+
+ZYJM	佳木斯机场
+
+ZLJQ	嘉峪关机场
+
+ZSYN	江苏盐城南洋机场
+
+ZYJZ	锦州小岭子机场
+
+ZHSS	荆州沙市机场
+
+ZSGS	井冈山机场
+
+ZSJD	景德镇罗家机场
+
+ZPJH	景洪西双版纳机场
+
+ZSJJ	九江庐山机场
+
+ZUJZ	九寨沟黄龙机场
+
+ZWSH	喀什机场
+
+ZWKM	克拉玛依机场
+
+ZWKC	库车机场
+
+ZWKL	库尔勒机场
+
+ZULB	荔波机场
+
+ZSLG	连云港白塔埠机场
+
+ZPLC	临沧机场
+
+ZSLY	临沂沐埠岭机场
+
+ZGZH	柳州白莲机场
+
+ZULZ	泸州机场
+
+ZGLD	罗定机场
+
+ZHLY	洛阳机场
+
+ZBMZ	满洲里西郊机场
+
+ZPMS	芒市机场
+
+ZGMX	梅县机场
+
+ZUMY	绵阳莱坝机场
+
+ZYMD	牡丹江海浪机场
+
+ZBLA	内蒙古海拉尔东山机场
+
+ZSCN	南昌昌北机场
+
+ZUNC	南充高坪机场
+
+ZGNN	南宁吴圩机场
+
+ZSNT	南通兴东机场
+
+ZHNY	南阳姜营机场
+
+ZYNJ	嫩江机场
+
+ZSNB	宁波栎社机场
+
+ZUZH	攀枝花保安营机场
+
+ZYQQ	齐齐哈尔三家子机场
+
+ZWCM	且末机场
+
+ZBSH	秦皇岛机场
+
+ZLQY	庆阳机场
+
+ZSJU	衢州机场
+
+ZSQZ	泉州晋江机场
+
+ZSRG	如皋机场
+
+ZGOW	汕头外砂机场
+
+ZWSS	鄯善机场
+
+ZPSM	思茅机场
+
+ZSSZ	苏州光福机场
+
+ZUSN	遂宁机场
+
+ZWTC	塔城机场
+
+ZSLQ	台州黄岩路桥机场
+
+ZBTL	通辽机场
+
+ZUTR	铜仁机场
+
+ZULP	万县五桥机场
+
+ZUWX	万州五桥机场
+
+ZSWH	威海文登大水泊机场
+
+ZSWF	潍坊机场
+
+ZSWZ	温州永强机场
+
+ZPWS	文山普者黑机场
+
+ZBUH	乌海机场
+
+ZBUL	乌兰浩特机场
+
+ZSWX	无锡硕放机场
+
+ZSWU	芜湖机场
+
+ZGWZ	梧州长洲岛机场
+
+ZLWW	武威机场
+
+ZSWY	武夷山机场
+
+ZUXC	西昌青山机场
+
+ZBXH	锡林浩特机场
+
+ZHXF	襄樊刘集机场
+
+ZGXN	兴宁机场
+
+ZUYI	兴义机场
+
+ZSXZ	徐州观音机场
+
+ZSYT	烟台莱山机场
+
+ZLYA	延安二十里铺机场
+
+ZYYJ	延吉朝阳川机场
+
+ZWYN	伊宁机场
+
+ZUYB	宜宾宜宾高坪机场
+
+ZHYC	宜昌三峡机场
+
+ZSYW	义乌机场
+
+ZLYL	榆林西沙机场
+
+ZBYC	运城张孝机场
+
+ZGDY	张家界大庸荷花机场
+
+ZPZT	昭通机场
+
+ZHCC	郑州新郑机场
+
+ZUCK	重庆江北机场
+
+ZSZS	舟山普陀山朱家尖机场
+
+ZUZY	遵义机场
+
+CYVR	温哥华国际机场
+
+CYXY	怀特霍斯
+
+CYYC	卡尔加里
+
+EBBR	布鲁塞尔
+
+EBLG	列日
+
+EBOS	奥斯坦德
+
+EDDB	柏林/申费尔德
+
+EDDF	法兰克福/美因
+
+EDDH	汉堡
+
+EDDM	慕尼黑
+
+EDDT	柏林/泰格尔
+
+EDDV	汉诺威尔
+
+EDGG	德国EDGG
+
+EETN	塔林
+
+EFHK	赫尔辛基/万塔
+
+EHAA	荷兰/阿姆斯特丹
+
+EHAM	阿姆斯特丹/期希
+
+EKCH	哥本哈根/凯斯楚
+
+ELLX	卢森堡
+
+EPWA	华沙/奥肯切
+
+ESSA	斯德哥尔摩/阿兰
+
+EYVI	维尔纽斯
+
+FAJS	约翰内斯堡
+
+FCBB	不拉柴维/马亚-
+
+FEFF	班吉/姆波科
+
+FNLU	罗安达/福韦雷罗
+
+FOON	弗朗斯维尔/姆文
+
+FZAA	金沙萨/恩吉利
+
+FZFD	巴多利特
+
+FZQA	卢本巴希-卢安诺
+
+HECA	开罗/开罗国际机
+
+HSFS	苏丹/法舍尔
+
+HSNN	苏丹/尼亚拉
+
+HSOB	欧拜伊德
+
+HSPN	苏丹/苏丹港
+
+HSSS	苏丹/喀土穆（机
+
+KBFI	西雅图波音公司基
+
+KBOI	博伊西航空战/高
+
+KBOS	波士顿/洛根
+
+KGEG	斯波坎国际机场
+
+KJFK	纽约/肯尼迪
+
+KLAX	洛杉矶
+
+KMWH	摩西湖
+
+KPDX	波特兰国际机场
+
+KSEA	西雅图/塔科马
+
+LFPG	巴黎
+
+LHBP	布达佩斯
+
+LHCC	匈牙利/布达佩斯
+
+LKPR	捷克/布拉格
+
+LOWL	林茨
+
+LOWW	维也纳/施韦夏特
+
+LRBB	罗马尼亚/布加勒
+
+LRCK	康斯坦察
+
+LROP	布加勒斯特
+
+LZBB	斯洛伐克/布拉迪
+
+OEJN	沙特阿拉伯/吉达
+
+OERK	利雅得/哈利德国
+
+OESH	沙特/沙鲁拉赫
+
+OIFM	伊斯法罕沙希德贝
+
+OIIE	德黑兰/霍明尼
+
+OIII	德黑兰/梅赫拉巴
+
+OIKB	阿巴斯港
+
+OIKK	克尔曼
+
+OIMM	马什哈德
+
+OINZ	达什特-纳兹
+
+OISS	设拉子
+
+OIYY	亚兹德
+
+OMAA	阿联酋/阿布扎比
+
+OMDB	阿联酋/迪拜
+
+OMRK	阿联酋/哈伊马角
+
+OOMS	马斯喀特/锡卜
+
+OPKC	卡拉奇/夸德阿扎
+
+OPLA	拉合尔
+
+OPPS	白沙瓦
+
+OPRN	伊斯兰堡
+
+OYSN	也门/萨纳
+
+PACD	科尔德湾
+
+PAFA	费尔班克斯
+
+PANC	安克雷奇
+
+PASY	谢米亚空军基地
+
+PHNL	夏威夷/火奴鲁鲁
+
+RCKH	高雄
+
+RCSS	台北/松山
+
+RCTP	台北/桃园
+
+RJAA	东京/成田
+
+RJBB	大阪/关西
+
+RJBD	南纪白浜/南纪白
+
+RJBE	神户
+
+RJCC	札幌/新千岁
+
+RJCH	函馆/函馆
+
+RJFF	福冈
+
+RJFU	长崎
+
+RJGG	名古屋
+
+RJOA	广岛
+
+RJOK	高知
+
+RJOO	大阪
+
+RJOS	日本/德岛
+
+RJSI	花卷
+
+RJSN	新泻
+
+RJSS	仙台
+
+RJTT	东京/羽田
+
+RKJJ	光州
+
+RKPC	济州
+
+RKPK	釜山/金海
+
+RKSI	首尔/仁川
+
+RKSS	首尔/金浦
+
+RKTN	大邱
+
+RKTU	清州
+
+RPLB	苏比克湾
+
+RPLC	克拉克
+
+RPLI	拉瓦格
+
+RPLL	马尼拉
+
+RPVM	拉普拉普/麦克坦
+
+UAAA	阿拉木图
+
+UACC	阿斯塔纳
+
+UAFM	比什凯克
+
+UAII	什姆肯特
+
+UAKK	卡拉干达
+
+UATT	阿克纠宾斯克
+
+UEEE	雅库茨克
+
+UHHH	哈巴罗夫斯克/诺
+
+UHMA	阿纳德尔/乌格尼
+
+UHPP	彼得曼巴甫洛夫斯
+
+UHSS	南萨哈林斯克
+
+UHWW	符拉迪沃斯托克/
+
+UIBB	布拉茨克
+
+UIII	伊尔库茨克（机场
+
+UKBB	基辅/鲍里斯波尔
+
+UKHV	乌克兰/哈尔科夫
+
+UKKM	基辅/安东诺夫
+
+ULAA	阿尔汉格尔斯克
+
+ULLI	圣彼得堡/普尔科
+
+ULPB	彼得罗扎我茨克
+
+UMMS	明斯克-2
+
+UNAA	阿巴坎
+
+UNBB	巴尔瑙尔
+
+UNEE	克麦罗沃
+
+UNKL	俄/克拉斯诺亚尔
+
+UNNT	新西伯利亚/托尔
+
+UNOO	俄/鄂木斯克（机
+
+USCC	俄/车里雅宾斯克
+
+USHH	俄/汉特-曼西斯
+
+USNN	下瓦尔托夫斯克
+
+USPP	皮尔姆
+
+USRR	俄/苏尔古特（机
+
+USSE	俄/北乌拉尔斯克
+
+USSS	叶卡捷琳堡/措尔
+
+USTR	秋明/罗斯希诺
+
+UTAA	阿什哈巴德
+
+UTAM	玛丽
+
+UTDD	杜尚别
+
+UTDL	胡贾德
+
+UTNU	乌尔根奇
+
+UTSA	纳沃伊
+
+UTSS	撒马尔罕机场
+
+UTTT	塔什干
+
+UUDD	莫斯科/多莫杰多
+
+UUEE	莫斯科/谢列梅捷
+
+UUWW	莫斯科/伏努科沃
+
+UUYY	俄/瑟克特夫卡尔
+
+UWLW	乌里扬诺夫斯克
+
+UWUU	俄/乌法
+
+UWWW	俄/萨马拉（机场
+
+VAAH	印度/艾哈迈达巴
+
+VABB	孟买
+
+VANP	印度/那格浦尔
+
+VDSR	柬埔寨/暹粒
+
+VECC	印度/加尔各答
+
+VGEG	孟加拉/吉大港
+
+VGZR	达卡/奇亚
+
+VHHH	香港
+
+VIDP	德里/英迪拉甘地
+
+VMMC	澳门
+
+VTBD	曼谷
+
+VTBS	曼谷/苏瓦那胡米
+
+VTBU	罗勇
+
+VTCC	清迈
+
+VTCT	清莱
+
+VTSB	素叻他尼
+
+VTSP	普吉
+
+VTSS	宋卡
+
+VTUD	乌隆
+
+VTUU	乌汶
+
+VVDN	岘港
+
+VVNB	河内
+
+VVTS	胡志明市/新山一
+
+VYMD	曼德勒
+
+VYYY	仰光
+
+WARQ	梭罗/西阿迪苏马
+
+WBSB	斯里巴加湾/文莱
+
+WIHH	雅加达/哈利姆
+
+WIII	雅加达
+
+WMKJ	新山
+
+WMKK	吉隆坡
+
+WMKP	槟榔屿
+
+WSSS	新加坡
